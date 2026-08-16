@@ -1,6 +1,8 @@
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_ollama import ChatOllama
+
+LOCAL_SCORE_THRESHOLD = 1.0
+PDF_SCORE_THRESHOLD = 2.0
 
 # Load embedding model
 embedding = HuggingFaceEmbeddings(
@@ -13,44 +15,53 @@ vectordb = Chroma(
     embedding_function=embedding
 )
 
-# Load Llama 3
-llm = ChatOllama(
-    model="llama3",
-    temperature=0
-)
 
-# User question
-query = input("Ask a question: ")
+def search_local_database(query, pdf_vectordb=None, k=3):
+    # ---------------------------------
+    # Search Uploaded PDF First
+    # ---------------------------------
 
-# Retrieve relevant chunks
-docs = vectordb.similarity_search(query, k=3)
+    if pdf_vectordb:
+        
+        print ("\nSearching uploaded PDF")
 
-for doc in docs:
-    print(doc.metadata["source"])
+        pdf_results = pdf_vectordb.similarity_search_with_score(
+            query,
+            k=k
+        )
 
-context = "\n\n".join([doc.page_content for doc in docs])
+        pdf_docs = []
 
-prompt = f"""
-You are a healthcare information assistant.
+        for doc, score in pdf_results:
 
-Using ONLY the provided context, answer the user's question in a clear and complete manner.
+            print(f"PDF Similarity Score: {score}")
 
-If the context contains a definition, explain it fully.
-If the context contains symptoms, list them.
-If the context contains treatments, summarize them.
+            if score < PDF_SCORE_THRESHOLD:
+                pdf_docs.append(doc)
 
-Do not mention the context itself.
+        if pdf_docs:
 
-Context:
-{context}
+            context = "\n\n".join(
+                doc.page_content for doc in pdf_docs
+            )
+            
+            print("using uploaded PDF")
 
-Question:
-{query}
+            return pdf_docs, context, "Uploaded PDF"
+    
+    print("\nSearching Local Knowledge Base")
+    results = vectordb.similarity_search_with_score(query, k=k)
 
-Answer:
-"""
+    docs = []
 
-response = llm.invoke(prompt)
+    for doc, score in results:
+        print(f"Similarity Score: {score}")
 
-print("\nAnswer:\n")
-print(response.content)
+        if score < LOCAL_SCORE_THRESHOLD:
+            docs.append(doc)
+
+    context = "\n\n".join(
+        doc.page_content for doc in docs
+    )
+
+    return docs, context, "Local Knowledge Base"

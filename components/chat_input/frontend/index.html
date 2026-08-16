@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <style>
+
+        /* ---------------------------------
+           Page
+        --------------------------------- */
+
+        body {
+            margin: 0;
+            padding: 10px;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: transparent;
+        }
+
+
+        /* ---------------------------------
+           Selected Files
+        --------------------------------- */
+
+        #file-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            margin-bottom: 6px;
+
+            font-size: 13px;
+        }
+
+
+        .file-item {
+            display: flex;
+            align-items: center;
+
+            padding: 5px 10px;
+
+            background: #f3f4f6;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 12px;
+
+            color: #374151;
+
+            max-width: 300px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+        /* ---------------------------------
+           Chat Container
+        --------------------------------- */
+
+        .chat-container {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 12px;
+
+            border: 1px solid #d1d5db;
+
+            border-radius: 24px;
+
+            background: #ffffff;
+
+            width: 100%;
+
+            box-sizing: border-box;
+        }
+
+
+        /* ---------------------------------
+           Buttons
+        --------------------------------- */
+
+        button {
+            border: none;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            font-size: 20px;
+
+            padding: 6px;
+
+            flex-shrink: 0;
+
+            width: 36px;
+
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        button:hover {
+            background: #f3f4f6;
+
+            border-radius: 50%;
+        }
+
+
+        /* ---------------------------------
+           Text Input
+        --------------------------------- */
+
+        textarea {
+            flex: 1;
+
+            border: none;
+
+            outline: none;
+
+            resize: none;
+
+            font-size: 15px;
+
+            font-family: inherit;
+
+            min-height: 24px;
+
+            max-height: 100px;
+
+            padding: 5px;
+
+            background: transparent;
+        }
+
+
+        /* ---------------------------------
+           Hidden PDF Input
+        --------------------------------- */
+
+        #fileInput {
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ---------------------------------
+         Selected Files
+    --------------------------------- -->
+
+    <div id="file-display"></div>
+
+
+    <!-- ---------------------------------
+         Chat Input
+    --------------------------------- -->
+
+    <div class="chat-container">
+
+
+        <!-- Attachment -->
+
+        <button
+            id="attach"
+            title="Attach files"
+            type="button"
+        >
+            ＋
+        </button>
+
+
+        <!-- Message -->
+
+        <textarea
+            id="message"
+            placeholder="Ask a healthcare question..."
+            rows="1"
+        ></textarea>
+
+
+        <!-- Microphone -->
+
+        <button
+            id="microphone"
+            title="Voice input"
+            type="button"
+        >
+            🎙️
+        </button>
+
+
+        <!-- Send -->
+
+        <button
+            id="send"
+            title="Send"
+            type="button"
+        >
+            ➤
+        </button>
+
+    </div>
+
+
+    <!-- ---------------------------------
+         Hidden File Picker
+    --------------------------------- -->
+
+    <input
+        type="file"
+        id="fileInput"
+        accept=".pdf,application/pdf"
+        multiple
+    >
+
+
+    <!-- ---------------------------------
+         Bundled JavaScript
+    --------------------------------- -->
+
+    <script src="./dist/index.js"></script>
+
+
+</body>
+</html>
