@@ -4,7 +4,7 @@ from io import BytesIO
 
 class ComponentUploadedFile(BytesIO):
     """
-    File-like object for PDFs received from
+    File-like object for files received from
     the custom Streamlit chat component.
     """
 

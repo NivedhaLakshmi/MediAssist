@@ -1,0 +1,18 @@
+CITYCARE DIAGNOSTIC LABORATORY
+Accredited Clinical Laboratory
+
+Patient Name : Mr. Ahmad Rahman         Age/Sex : 52/M
+Sample Date  : 12-03-2026               Ref. By : Dr. K. Menon
+
+LIPID PROFILE AND GLUCOSE
+Test                    Result      Unit      Reference Range
+----------------------------------------------------------------------
+Total Cholesterol       232         mg/dL     < 200
+Triglycerides           140         mg/dL     < 150
+HDL Cholesterol         38          mg/dL     > 40
+LDL Cholesterol         162         mg/dL     < 100
+Fasting Glucose         108         mg/dL     70 - 100
+HbA1c                   5.9         %         4.0 - 5.6
+----------------------------------------------------------------------
+
+*** End of Report ***

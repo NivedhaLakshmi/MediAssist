@@ -1,0 +1,10 @@
+# Streamlit reads this from ".streamlit/" - the directory name and
+# the section names both have to be exact, or the settings are
+# silently ignored.
+
+[browser]
+# No usage telemetry leaves this machine.
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

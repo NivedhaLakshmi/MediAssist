@@ -1,0 +1,124 @@
+{
+  "llama3": {
+    "ranges": {
+      "correct": 36,
+      "total": 40,
+      "mean_seconds": 0.37,
+      "misses": [
+        "Total WBC Count 11800 vs 4000 - 10000: said within, truth above",
+        "RBC Count 4.3 vs M-4.5-5.9 F-3.8-4.8: said below, truth within",
+        "HbA1c 5.9 vs 4.0 - 5.6: said within, truth above",
+        "Total Bilirubin 1.6 vs 0.3 to 1.2: said within, truth above"
+      ]
+    },
+    "responses": {
+      "passed": 8,
+      "total": 13,
+      "mean_seconds": 3.08
+    },
+    "routing": {
+      "correct": 0,
+      "total": 28,
+      "fallbacks": 28,
+      "natural_correct": 0,
+      "mean_seconds": 0.02,
+      "log_tail": [
+        "keyword  model 0/16   rules 16/16",
+        "natural  model 0/12   rules 0/12",
+        "all      model 0/28   rules 16/28",
+        "mean routing time 0.02s"
+      ]
+    }
+  },
+  "llama3.2": {
+    "ranges": {
+      "correct": 15,
+      "total": 40,
+      "mean_seconds": 0.95,
+      "misses": [
+        "Haemoglobin 14.6 vs 13.0 - 17.0: said above, truth within",
+        "Neutrophils 72 vs 40 - 75: said above, truth within",
+        "Eosinophils 3 vs 1 - 6: said below, truth within",
+        "Monocytes 5 vs 2 - 10: said above, truth within",
+        "Platelet Count 245000 vs 150000 - 410000: said above, truth within",
+        "RBC Count 4.9 vs 4.5 - 5.9: said above, truth within",
+        "PCV 44.1 vs 40 - 50: said above, truth within",
+        "MCV 88 vs 83 - 101: said above, truth within",
+        "MCH 29.8 vs 27 - 32: said above, truth within",
+        "MCHC 33.9 vs 31.5 - 34.5: said above, truth within",
+        "Haemoglobin 11.4 vs M-13.0-17.0 F-12.0-15.0: said above, truth below",
+        "RBC Count 4.3 vs M-4.5-5.9 F-3.8-4.8: said below, truth within",
+        "ESR 18 vs M-0-15 F-0-20: said above, truth within",
+        "Serum Creatinine 0.7 vs M-0.7-1.3 F-0.5-1.1: said above, truth within",
+        "Triglycerides 140 vs < 150: said above, truth within",
+        "SGOT 32 vs 8 to 40: said above, truth within",
+        "Alkaline Phosphatase 96 vs 44 to 147: said above, truth within",
+        "Blood Urea Nitrogen 14 vs 8 to 25: said above, truth within",
+        "Platelet Count 1,80,000 vs 1,50,000 to 4,50,000: said above, truth within",
+        "Free T4 1.1 vs 0.8 - 1.8: said above, truth within",
+        "Sodium 133 vs 135 - 145: said above, truth below",
+        "Potassium 4.2 vs 3.5 - 5.1: said above, truth within",
+        "Chloride 101 vs 98 - 107: said above, truth within",
+        "Calcium 9.4 vs 8.6 - 10.3: said above, truth within",
+        "Vitamin B12 410 vs 200 - 900: said above, truth within"
+      ]
+    },
+    "responses": {
+      "passed": 8,
+      "total": 13,
+      "mean_seconds": 1.69
+    },
+    "routing": {
+      "correct": 26,
+      "total": 28,
+      "fallbacks": 0,
+      "natural_correct": 10,
+      "mean_seconds": 0.68,
+      "log_tail": [
+        "keyword  model 16/16   rules 16/16",
+        "natural  model 10/12   rules 0/12",
+        "all      model 26/28   rules 16/28",
+        "mean routing time 0.68s"
+      ]
+    }
+  },
+  "qwen2.5:7b-instruct": {
+    "ranges": {
+      "correct": 29,
+      "total": 40,
+      "mean_seconds": 0.36,
+      "misses": [
+        "Eosinophils 3 vs 1 - 6: said above, truth within",
+        "Monocytes 5 vs 2 - 10: said above, truth within",
+        "Platelet Count 245000 vs 150000 - 410000: said above, truth within",
+        "MCV 88 vs 83 - 101: said below, truth within",
+        "MCHC 33.9 vs 31.5 - 34.5: said below, truth within",
+        "PCV 35.2 vs M-40-50 F-36-46: said above, truth below",
+        "Serum Creatinine 0.7 vs M-0.7-1.3 F-0.5-1.1: said below, truth within",
+        "Platelet Count 1,80,000 vs 1,50,000 to 4,50,000: said above, truth within",
+        "Free T4 1.1 vs 0.8 - 1.8: said below, truth within",
+        "Chloride 101 vs 98 - 107: said below, truth within",
+        "Calcium 9.4 vs 8.6 - 10.3: said below, truth within"
+      ]
+    },
+    "responses": {
+      "passed": 11,
+      "total": 13,
+      "mean_seconds": 3.29
+    },
+    "routing": {
+      "correct": 28,
+      "total": 28,
+      "fallbacks": 0,
+      "natural_correct": 12,
+      "mean_seconds": 1.67,
+      "log_tail": [
+        "keyword  model 16/16   rules 16/16",
+        "natural  model 12/12   rules 0/12",
+        "all      model 28/28   rules 16/28",
+        "mean routing time 1.67s"
+      ]
+    }
+  },
+  "run": "2026-10-16T14:26:12"
+}

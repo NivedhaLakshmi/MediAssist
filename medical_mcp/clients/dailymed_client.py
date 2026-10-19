@@ -1,6 +1,4 @@
 import requests
-import re
-import html
 import xml.etree.ElementTree as ET
 
 from utils.constants import DAILYMED_BASE_URL
@@ -41,31 +39,6 @@ def _download_xml(setid: str):
     response.raise_for_status()
 
     return response.text
-
-def _extract_text(xml: str, heading: str):
-
-    """
-    Extract the text that follows a section heading.
-    """
-
-    start = xml.find(heading)
-
-    if start == -1:
-        return ""
-
-    # Extract approximately the next 4000 characters
-    snippet = xml[start:start + 4000]
-
-    # Remove XML tags
-    snippet = re.sub("<.*?>", " ", snippet)
-
-    # Decode HTML entities
-    snippet = html.unescape(snippet)
-
-    # Remove extra whitespace
-    snippet = re.sub(r"\s+", " ", snippet)
-
-    return snippet.strip()
 
 def _extract_sections(xml: str):
 
@@ -146,35 +119,3 @@ def search_dailymed(query: str):
         "url":
             f"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={drug['setid']}"
     }
-    
-"""
-def search_dailymed(query: str):
-    
-    Search DailyMed by drug name.
-    
-
-    try:
-
-        response = requests.get(
-            DAILYMED_BASE_URL,
-            params={
-                "drug_name": query,
-            },
-            timeout=20,
-        )
-
-        response.raise_for_status()
-
-        data = response.json()
-
-        print(data)
-
-        return data
-
-    except Exception as e:
-
-        print("DailyMed Client Error:")
-        print(e)
-
-        return {}
-"""

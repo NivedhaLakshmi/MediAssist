@@ -14,8 +14,13 @@ _chat_input = components.declare_component(
 )
 
 
-def chat_input(value=""):
+def chat_input(value="", voice_completion_id=0):
+    # The key must be stable: without one Streamlit derives the widget
+    # id from the element's position, which the growing chat history
+    # shifts, remounting the component and discarding its pending value.
     return _chat_input(
         value=value,
-        default=None
+        voice_completion_id=voice_completion_id,
+        default=None,
+        key="mediassist_chat_input",
     )

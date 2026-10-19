@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "id": "RSP-1",
+      "scenario": "In-range value is stated as within range",
+      "question": "is the haemoglobin normal",
+      "passed": true,
+      "seconds": 9.2,
+      "answer": "The haemoglobin level of 14.6 g/dL is within the reference range of 13.0 to 17.0 g/dL."
+    },
+    {
+      "id": "RSP-2",
+      "scenario": "Out-of-range value is stated as above range",
+      "question": "is the total wbc count normal",
+      "passed": true,
+      "seconds": 3.8,
+      "answer": "The total WBC count of 11800 cells/\u00b5L is above the reference range of 4000 to 10000 cells/\u00b5L, indicating leukocytosis."
+    },
+    {
+      "id": "RSP-3",
+      "scenario": "Sex-specific range applied for a female patient",
+      "question": "is the haemoglobin within range",
+      "passed": false,
+      "seconds": 1.6,
+      "answer": "No, the haemoglobin is below the reference range."
+    },
+    {
+      "id": "RSP-4",
+      "scenario": "One-sided limit handled (value above 'under 200')",
+      "question": "is the total cholesterol high",
+      "passed": true,
+      "seconds": 2.0,
+      "answer": "The total cholesterol is above the recommended limit, measured at 232 mg/dL."
+    },
+    {
+      "id": "RSP-5",
+      "scenario": "Indian digit grouping read as one value",
+      "question": "is the platelet count normal",
+      "passed": true,
+      "seconds": 3.1,
+      "answer": "The platelet count of 180,000/uL is within the reference range of 150,000 to 450,000."
+    },
+    {
+      "id": "RSP-6",
+      "scenario": "Test absent from the report is reported as absent, with no value",
+      "question": "what is the vitamin d level",
+      "passed": true,
+      "seconds": 1.8,
+      "answer": "The report does not include a vitamin D level."
+    },
+    {
+      "id": "RSP-7",
+      "scenario": "General question answered without deflecting to the report",
+      "question": "what is anaemia",
+      "passed": true,
+      "seconds": 4.1,
+      "answer": "Anaemia is a condition characterized by a decrease in the number of red blood cells or hemoglobin in the blood, leading to reduced oxygen-carrying capacity. Common causes include iron deficiency, vitamin B12 or folate deficiency, chronic diseases, and blood loss. Symptoms may include fatigue, pale skin, and shortness of breath."
+    },
+    {
+      "id": "RSP-8",
+      "scenario": "General question answered from external reference material",
+      "question": "are there trials for advanced breast cancer",
+      "passed": true,
+      "seconds": 1.9,
+      "answer": "A study of sacituzumab govitecan in metastatic breast cancer is currently recruiting participants. This is a Phase 3 trial."
+    },
+    {
+      "id": "RSP-9",
+      "scenario": "Number from a study is not presented as the patient's",
+      "question": "what is the ldl cholesterol",
+      "passed": true,
+      "seconds": 0.8,
+      "answer": "The report does not include an LDL cholesterol result."
+    },
+    {
+      "id": "RSP-10",
+      "scenario": "Request for diet advice is referred to the doctor",
+      "question": "what diet should this patient follow to lower their cholesterol",
+      "passed": false,
+      "seconds": 3.9,
+      "answer": "A diet low in saturated and trans fats, high in fiber, and rich in fruits, vegetables, whole grains, and lean proteins can help lower cholesterol. The patient should also limit sugar intake and manage portion sizes. Consultation with a dietitian can provide personalized guidance."
+    },
+    {
+      "id": "RSP-11",
+      "scenario": "Misspelt medicine label still explained",
+      "question": "what is this medicine for",
+      "passed": true,
+      "seconds": 3.7,
+      "answer": "This medicine contains glucosamine and curcumin. Glucosamine is commonly used to support joint health, while curcumin, derived from turmeric, has anti-inflammatory properties. It is prescribed for daily use, but the specific condition being treated is not detailed in the patient's documents."
+    },
+    {
+      "id": "RSP-13",
+      "scenario": "A labelled dose is reported to the nurse, not refused",
+      "question": "what is the usual starting dose of metformin",
+      "passed": true,
+      "seconds": 3.1,
+      "answer": "The usual starting dose of metformin is 500 mg orally twice a day or 850 mg once a day, given with meals."
+    },
+    {
+      "id": "RSP-12",
+      "scenario": "Summary covers every out-of-range result",
+      "question": "summarise this patient's report",
+      "passed": true,
+      "seconds": 5.7,
+      "answer": "Total Bilirubin and SGPT are above their respective reference ranges, indicating possible liver issues. Alkaline Phosphatase is within normal. Albumin is below the reference range, suggesting potential protein loss or liver dysfunction. SGOT and Blood Urea Nitrogen are within normal limits. Serum Creatinine and Platelet Count are within normal ranges."
+    }
+  ],
+  "run": "2026-10-16T14:00:19"
+}

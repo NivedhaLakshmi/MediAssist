@@ -10,9 +10,15 @@
            Page
         --------------------------------- */
 
+        html,
+        body {
+            height: 100%;
+        }
+
+
         body {
             margin: 0;
-            padding: 10px;
+            padding: 0;
 
             font-family:
                 -apple-system,
@@ -21,6 +27,8 @@
                 sans-serif;
 
             background: transparent;
+
+            position: relative;
         }
 
 
@@ -28,61 +36,311 @@
            Selected Files
         --------------------------------- */
 
+        /* Sits in normal flow directly above the input bar. When it
+           was absolutely positioned it ended up behind the (now
+           taller) input and the attachment was invisible. */
         #file-display {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 6px;
 
-            margin-bottom: 6px;
+            margin-bottom: 8px;
 
             font-size: 13px;
         }
 
 
+        #file-display:empty {
+            display: none;
+        }
+
+
         .file-item {
             display: flex;
+
             align-items: center;
 
             padding: 5px 10px;
 
-            background: #f3f4f6;
+            background: #3a3a38;
 
-            border: 1px solid #e5e7eb;
+            border: 1px solid rgba(255, 255, 255, 0.14);
 
             border-radius: 12px;
 
-            color: #374151;
+            color: #ececec;
 
             max-width: 300px;
 
             overflow: hidden;
+
             text-overflow: ellipsis;
+
             white-space: nowrap;
         }
 
+
+        /* ---------------------------------
+           Chat Area
+        --------------------------------- */
+
+        .chat-wrapper {
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 100%;
+        }
+
+
+        /* ---------------------------------
+           Attachment Menu
+        --------------------------------- */
+
+        #attachment-menu {
+            position: absolute;
+
+            left: 0;
+
+            bottom: calc(100% + 8px);
+
+            width: 220px;
+
+            padding: 8px;
+
+            background: #30302e;
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 28px rgba(0, 0, 0, 0.55);
+
+            display: none;
+
+            z-index: 9999;
+
+            box-sizing: border-box;
+        }
+
+
+        #attachment-menu.visible {
+            display: block;
+        }
+
+
+        .attachment-option {
+            display: flex;
+
+            align-items: center;
+
+            /* The shared button rule centres its content, which
+               left every row's icon at a different x position. */
+            justify-content: flex-start;
+
+            gap: 10px;
+
+            width: 100%;
+
+            height: 46px;
+
+            padding: 0 10px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: transparent;
+
+            color: #ececec;
+
+            cursor: pointer;
+
+            font-size: 14px;
+
+            font-family: inherit;
+
+            text-align: left;
+        }
+
+
+        .attachment-option:hover {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+
+        .attachment-icon {
+            display: inline-flex;
+
+            width: 28px;
+
+            height: 28px;
+
+            flex-shrink: 0;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background: rgba(255, 255, 255, 0.10);
+
+            color: #ffffff;
+        }
+
+
+        .attachment-icon svg,
+        .control-icon {
+            width: 18px;
+
+            height: 18px;
+
+            stroke: currentColor;
+
+            stroke-width: 2;
+
+            fill: none;
+        }
+
+
+        /* ---------------------------------
+           Camera dialog
+        --------------------------------- */
+
+        #camera-dialog {
+            display: none;
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: calc(100% + 8px);
+
+            width: min(360px, 100%);
+
+            padding: 12px;
+
+            box-sizing: border-box;
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+
+            border-radius: 16px;
+
+            background: #30302e;
+
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6);
+
+            z-index: 10000;
+        }
+
+
+        #camera-dialog.visible {
+            display: block;
+        }
+
+
+        .camera-header,
+        .camera-actions {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+
+        .camera-header {
+            margin-bottom: 10px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #f5f5f5;
+        }
+
+
+        #camera-preview {
+            display: block;
+
+            width: 100%;
+
+            max-height: 320px;
+
+            border-radius: 12px;
+
+            background: #111827;
+
+            object-fit: cover;
+        }
+
+
+        .camera-actions {
+            margin-top: 10px;
+
+            justify-content: flex-end;
+        }
+
+
+        .camera-action {
+            width: auto;
+
+            height: 34px;
+
+            padding: 0 12px;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+        }
+
+
+        .camera-action.primary {
+            background: #ffffff;
+
+            color: #1f1f1f;
+        }
 
         /* ---------------------------------
            Chat Container
         --------------------------------- */
 
         .chat-container {
+
             display: flex;
 
-            align-items: center;
+            align-items: flex-end;
 
-            gap: 8px;
+            gap: 6px;
 
-            padding: 8px 12px;
+            padding: 10px 12px;
 
-            border: 1px solid #d1d5db;
+            border: 1px solid rgba(255, 255, 255, 0.16);
 
-            border-radius: 24px;
+            border-radius: 20px;
 
-            background: #ffffff;
+            background: #30302e;
+
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
 
             width: 100%;
 
             box-sizing: border-box;
+        }
+
+
+        .chat-container:focus-within {
+            border-color: rgba(255, 255, 255, 0.30);
         }
 
 
@@ -97,28 +355,59 @@
 
             cursor: pointer;
 
+            color: #ffffff;
+
             font-size: 20px;
 
             padding: 6px;
 
             flex-shrink: 0;
 
-            width: 36px;
+            width: 38px;
 
-            height: 36px;
+            height: 38px;
 
             display: flex;
 
             align-items: center;
 
             justify-content: center;
+
+            border-radius: 50%;
         }
 
 
         button:hover {
-            background: #f3f4f6;
+            background: rgba(255, 255, 255, 0.12);
+        }
 
-            border-radius: 50%;
+
+        button:disabled {
+            cursor: default;
+
+            opacity: 0.45;
+        }
+
+
+        #send {
+            background: #ffffff;
+
+            color: #1f1f1f;
+        }
+
+
+        #send:hover {
+            background: #e6e6e6;
+        }
+
+
+        #send:disabled {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+
+        #microphone.recording {
+            color: #ff6b6b;
         }
 
 
@@ -137,23 +426,36 @@
 
             font-size: 15px;
 
+            line-height: 1.5;
+
             font-family: inherit;
 
-            min-height: 24px;
+            color: #f5f5f5;
 
-            max-height: 100px;
+            caret-color: #f5f5f5;
 
-            padding: 5px;
+            min-height: 46px;
+
+            max-height: 180px;
+
+            overflow-y: auto;
+
+            padding: 10px 6px;
 
             background: transparent;
         }
 
 
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.42);
+        }
+
+
         /* ---------------------------------
-           Hidden PDF Input
+           Hidden File Inputs
         --------------------------------- */
 
-        #fileInput {
+        .hidden-file-input {
             display: none;
         }
 
@@ -165,81 +467,149 @@
 <body>
 
 
-    <!-- ---------------------------------
-         Selected Files
-    --------------------------------- -->
+    <!-- Chat Wrapper -->
+<div class="chat-wrapper">
 
+    <!-- Selected files, shown directly above the input bar -->
     <div id="file-display"></div>
 
+    <!-- Floating Attachment Menu -->
+    <div id="attachment-menu">
 
-    <!-- ---------------------------------
-         Chat Input
-    --------------------------------- -->
+        <button
+            id="camera-option"
+            class="attachment-option"
+            type="button"
+        >
+            <span class="attachment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+            <span>Camera</span>
+        </button>
 
+        <button
+            id="image-option"
+            class="attachment-option"
+            type="button"
+        >
+            <span class="attachment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m4 18 5-5 3 3 3-4 5 6"/></svg></span>
+            <span>Upload image</span>
+        </button>
+
+        <button
+            id="pdf-option"
+            class="attachment-option"
+            type="button"
+        >
+            <span class="attachment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5"/><path d="M8 15h8M8 18h6"/></svg></span>
+            <span>Upload PDF</span>
+        </button>
+
+    </div>
+
+
+    <!-- Camera preview and capture controls -->
+    <div
+        id="camera-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Camera"
+    >
+        <div class="camera-header">
+            <span>Take a photo</span>
+            <button
+                id="close-camera"
+                class="camera-action"
+                title="Close camera"
+                type="button"
+            >
+                ×
+            </button>
+        </div>
+
+        <video
+            id="camera-preview"
+            autoplay
+            playsinline
+        ></video>
+
+        <div class="camera-actions">
+            <button
+                id="capture-camera"
+                class="camera-action primary"
+                type="button"
+            >
+                Take photo
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Chat Input -->
     <div class="chat-container">
-
-
-        <!-- Attachment -->
 
         <button
             id="attach"
-            title="Attach files"
+            title="Attach"
             type="button"
         >
-            ＋
+            <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </button>
-
-
-        <!-- Message -->
 
         <textarea
             id="message"
-            placeholder="Ask a healthcare question..."
+            placeholder="Type your question..."
             rows="1"
         ></textarea>
-
-
-        <!-- Microphone -->
 
         <button
             id="microphone"
             title="Voice input"
             type="button"
-        >
-            🎙️
-        </button>
-
-
-        <!-- Send -->
+        ></button>
 
         <button
             id="send"
             title="Send"
             type="button"
         >
-            ➤
+            <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
         </button>
 
     </div>
 
-
-    <!-- ---------------------------------
-         Hidden File Picker
-    --------------------------------- -->
-
-    <input
-        type="file"
-        id="fileInput"
-        accept=".pdf,application/pdf"
-        multiple
-    >
+</div>
 
 
-    <!-- ---------------------------------
-         Bundled JavaScript
-    --------------------------------- -->
+<!-- Camera -->
+<input
+    type="file"
+    id="cameraInput"
+    class="hidden-file-input"
+    accept="image/*"
+    capture="environment"
+>
 
-    <script src="./dist/index.js"></script>
+
+<!-- Image upload -->
+<input
+    type="file"
+    id="imageInput"
+    class="hidden-file-input"
+    accept="image/*"
+    multiple
+>
+
+
+<!-- PDF upload -->
+<input
+    type="file"
+    id="pdfInput"
+    class="hidden-file-input"
+    accept=".pdf,application/pdf"
+    multiple
+>
+
+
+<script src="./dist/index.js"></script>
 
 
 </body>

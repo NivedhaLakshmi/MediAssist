@@ -1,0 +1,20 @@
+CITYCARE DIAGNOSTIC LABORATORY
+Accredited Clinical Laboratory
+
+Patient Name : Mdm. Lim Siew Hong       Age/Sex : 61/F
+Sample Date  : 12-03-2026               Ref. By : Dr. K. Menon
+
+LIVER AND KIDNEY FUNCTION
+Test                    Result      Unit      Reference Range
+----------------------------------------------------------------------
+Total Bilirubin         1.6         mg/dL     0.3 to 1.2
+SGOT                    32          U/L       8 to 40
+SGPT                    58          U/L       5 to 35
+Alkaline Phosphatase    96          U/L       44 to 147
+Albumin                 3.2         g/dL      3.5 to 5.0
+Blood Urea Nitrogen     14          mg/dL     8 to 25
+Serum Creatinine        1.0         mg/dL     0.6 to 1.2
+Platelet Count          1,80,000    /uL       1,50,000 to 4,50,000
+----------------------------------------------------------------------
+
+*** End of Report ***

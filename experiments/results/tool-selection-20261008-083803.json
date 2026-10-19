@@ -1,0 +1,202 @@
+{
+  "model": "qwen2.5:7b-instruct",
+  "run": "2026-10-08T08:38:03",
+  "repeats": 1,
+  "model_correct": 16,
+  "rule_correct": 12,
+  "total": 16,
+  "cases": [
+    {
+      "question": "what are the side effects of metformin",
+      "expected": "search_dailymed",
+      "model": "search_dailymed",
+      "model_all": [
+        "search_dailymed"
+      ],
+      "model_correct": true,
+      "rule": "search_dailymed",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what is the usual dosage for amoxicillin",
+      "expected": "search_dailymed",
+      "model": "search_dailymed",
+      "model_all": [
+        "search_dailymed"
+      ],
+      "model_correct": true,
+      "rule": "search_dailymed",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "can I take ibuprofen with warfarin",
+      "expected": "search_dailymed",
+      "model": "search_dailymed",
+      "model_all": [
+        "search_dailymed"
+      ],
+      "model_correct": true,
+      "rule": "search_dailymed",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what are the warnings for atorvastatin",
+      "expected": "search_dailymed",
+      "model": "search_dailymed",
+      "model_all": [
+        "search_dailymed"
+      ],
+      "model_correct": true,
+      "rule": "search_dailymed",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "is dolo 650 safe for a child",
+      "expected": "search_dailymed",
+      "model": "search_dailymed",
+      "model_all": [
+        "search_dailymed"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": false,
+      "stable": true
+    },
+    {
+      "question": "are there any clinical trials for type 2 diabetes",
+      "expected": "search_clinical_trials",
+      "model": "search_clinical_trials",
+      "model_all": [
+        "search_clinical_trials"
+      ],
+      "model_correct": true,
+      "rule": "search_clinical_trials",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what new treatments are being studied for psoriasis",
+      "expected": "search_clinical_trials",
+      "model": "search_clinical_trials",
+      "model_all": [
+        "search_clinical_trials"
+      ],
+      "model_correct": true,
+      "rule": "search_clinical_trials",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "is there an ongoing study for alzheimer's disease",
+      "expected": "search_clinical_trials",
+      "model": "search_clinical_trials",
+      "model_all": [
+        "search_clinical_trials"
+      ],
+      "model_correct": true,
+      "rule": "search_clinical_trials",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "any experimental therapy for sickle cell",
+      "expected": "search_clinical_trials",
+      "model": "search_clinical_trials",
+      "model_all": [
+        "search_clinical_trials"
+      ],
+      "model_correct": true,
+      "rule": "search_clinical_trials",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what is hypertension",
+      "expected": "search_medlineplus",
+      "model": "search_medlineplus",
+      "model_all": [
+        "search_medlineplus"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what causes anaemia",
+      "expected": "search_medlineplus",
+      "model": "search_medlineplus",
+      "model_all": [
+        "search_medlineplus"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "how is asthma usually managed",
+      "expected": "search_medlineplus",
+      "model": "search_medlineplus",
+      "model_all": [
+        "search_medlineplus"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what does a thyroid test measure",
+      "expected": "search_medlineplus",
+      "model": "search_medlineplus",
+      "model_all": [
+        "search_medlineplus"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": true,
+      "stable": true
+    },
+    {
+      "question": "what does recent research say about intermittent fasting",
+      "expected": "search_pubmed",
+      "model": "search_pubmed",
+      "model_all": [
+        "search_pubmed"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": false,
+      "stable": true
+    },
+    {
+      "question": "is there evidence linking sleep and immune function",
+      "expected": "search_pubmed",
+      "model": "search_pubmed",
+      "model_all": [
+        "search_pubmed"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": false,
+      "stable": true
+    },
+    {
+      "question": "what do studies show about vitamin d supplementation",
+      "expected": "search_pubmed",
+      "model": "search_pubmed",
+      "model_all": [
+        "search_pubmed"
+      ],
+      "model_correct": true,
+      "rule": "search_medlineplus",
+      "rule_correct": false,
+      "stable": true
+    }
+  ]
+}

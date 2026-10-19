@@ -1,0 +1,13 @@
+######## llama3
+ranges: {'correct': 36, 'total': 40, 'mean_seconds': 0.37}
+responses: {'passed': 8, 'total': 13, 'mean_seconds': 3.08}
+routing: {'correct': 0, 'total': 28, 'fallbacks': 28, 'natural_correct': 0, 'mean_seconds': 0.02}
+######## llama3.2
+ranges: {'correct': 15, 'total': 40, 'mean_seconds': 0.95}
+responses: {'passed': 8, 'total': 13, 'mean_seconds': 1.69}
+routing: {'correct': 26, 'total': 28, 'fallbacks': 0, 'natural_correct': 10, 'mean_seconds': 0.68}
+######## qwen2.5:7b-instruct
+ranges: {'correct': 29, 'total': 40, 'mean_seconds': 0.36}
+responses: {'passed': 11, 'total': 13, 'mean_seconds': 3.29}
+routing: {'correct': 28, 'total': 28, 'fallbacks': 0, 'natural_correct': 12, 'mean_seconds': 1.67}
+DONE

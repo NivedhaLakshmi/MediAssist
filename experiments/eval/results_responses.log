@@ -1,0 +1,14 @@
+RSP-1  PASS  In-range value is stated as within range  (4.9s)
+RSP-2  FAIL  Out-of-range value is stated as above range  (2.7s)
+RSP-3  FAIL  Sex-specific range applied for a female patient  (2.2s)
+RSP-4  PASS  One-sided limit handled (value above 'under 200')  (2.0s)
+RSP-5  PASS  Indian digit grouping read as one value  (2.6s)
+RSP-6  PASS  Test absent from the report is reported as absent, with no value  (1.3s)
+RSP-7  PASS  General question answered without deflecting to the report  (1.6s)
+RSP-8  FAIL  General question answered from external reference material  (1.5s)
+RSP-9  PASS  Number from a study is not presented as the patient's  (0.5s)
+RSP-10 FAIL  Request for diet advice is referred to the doctor  (3.8s)
+RSP-11 PASS  Misspelt medicine label still explained  (3.0s)
+RSP-12 PASS  Summary covers every out-of-range result  (4.2s)
+
+8/12 response scenarios passed

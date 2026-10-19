@@ -1,0 +1,71 @@
+{
+  "scenarios": [
+    {
+      "id": "PRV-1",
+      "scenario": "Privacy audit finds no unreviewed network destination",
+      "passed": true,
+      "detail": "RESULT line present"
+    },
+    {
+      "id": "PRV-2",
+      "scenario": "A typed question sends only its own keywords, nothing from the report",
+      "passed": true,
+      "detail": "keywords sent: 'wbc 11800'; hosts ['eutils.ncbi.nlm.nih.gov', 'wsearch.nlm.nih.gov']; leaked nothing"
+    },
+    {
+      "id": "PRV-10",
+      "scenario": "A photographed lab report adds no words to the outside search",
+      "passed": true,
+      "detail": "3 reports (1 generated, 2 real) contributed 0 terms"
+    },
+    {
+      "id": "PRV-11",
+      "scenario": "A photographed medicine label still adds its name to the search",
+      "passed": true,
+      "detail": "terms 'dolo 650 paracetamol tablets micro labs'"
+    },
+    {
+      "id": "PRV-3",
+      "scenario": "Data export contains the patient's data and no credentials",
+      "passed": true,
+      "detail": "files ['README.txt', 'chat_history.json', 'patient_reports.json', 'account.json']; credential patterns found: none"
+    },
+    {
+      "id": "PRV-4",
+      "scenario": "Deleting one profile's chats leaves another profile's chats",
+      "passed": true,
+      "detail": "A 0, B 1"
+    },
+    {
+      "id": "PRV-5",
+      "scenario": "A stored image name cannot point outside the profile folder",
+      "passed": true,
+      "detail": "4 crafted names all rejected"
+    },
+    {
+      "id": "PRV-6",
+      "scenario": "A photo no conversation refers to is deleted from disk",
+      "passed": true,
+      "detail": "stored as 4b13b227750e4a099d65534f7267435f.png, then pruned"
+    },
+    {
+      "id": "PRV-7",
+      "scenario": "Embedding model loads without contacting its download service",
+      "passed": true,
+      "detail": "HF_HUB_OFFLINE=1"
+    },
+    {
+      "id": "PRV-8",
+      "scenario": "Interface usage statistics are switched off",
+      "passed": true,
+      "detail": ".streamlit/config.toml"
+    },
+    {
+      "id": "PRV-9",
+      "scenario": "Model runtime and source gateway are reached on this machine only",
+      "passed": true,
+      "detail": "gateway bound to 127.0.0.1:8000; model runtime at 127.0.0.1:11434"
+    }
+  ],
+  "run": "2026-10-15T13:32:29"
+}

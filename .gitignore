@@ -52,4 +52,13 @@ covidTest.pdf
 # ==============================
 
 *.tmp
-*.temp
+*.temp.env.*
+.env.*
+user_data/
+data/mesh_vocabulary.pkl
+
+# MeSH descriptor file (about 300 MB, over the GitHub limit)
+data/desc2026.xml
+
+# Real radiograph kept local only
+experiments/eval/dataset/xray_chest.jpg

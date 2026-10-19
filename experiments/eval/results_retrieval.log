@@ -1,0 +1,95 @@
+Stored 4 chunks from R1_cbc_male.pdf
+Stored 4 chunks from R3_lipid_one_sided.pdf
+Stored 4 chunks from R5_thyroid_electrolytes.pdf
+Stored 4 chunks from R2_cbc_female_sexed.pdf
+Stored 4 chunks from R4_lft_kft_to_ranges.pdf
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 1 | Score: 1.28 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 0 | Score: 1.56 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 2 | Score: 1.59 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.61 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 0 | Score: 1.62 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 0 | Score: 1.64 | used
+RAG-1PASS  'what is my TSH level' ranks the right report first and gives the right verdict  (best distance 1.28, top R5_thyroid_electrolytes.pdf, verdict above (expected above))
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 1 | Score: 0.84 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.41 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 1.43 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 2 | Score: 1.55 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 2 | Score: 1.70 | too far - skipped
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 0 | Score: 1.73 | too far - skipped
+RAG-2PASS  'is my total cholesterol high' ranks the right report first and gives the right verdict  (best distance 0.84, top R3_lipid_one_sided.pdf, verdict above (expected above))
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 0.71 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 0.85 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 2 | Score: 1.35 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 1 | Score: 1.35 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 2 | Score: 1.51 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 1 | Score: 1.63 | used
+RAG-3PASS  'how is my white blood cell count' ranks the right report first and gives the right verdict  (best distance 0.71, top R1_cbc_male.pdf, verdict above (expected above))
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 1 | Score: 1.17 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 2 | Score: 1.51 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 0 | Score: 1.68 | too far - skipped
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 1.69 | too far - skipped
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.71 | too far - skipped
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 1 | Score: 1.72 | too far - skipped
+RAG-4PASS  'is my sodium okay' ranks the right report first and gives the right verdict  (best distance 1.17, top R5_thyroid_electrolytes.pdf, verdict below (expected below))
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 2 | Score: 0.75 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.34 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 1 | Score: 1.49 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 1.50 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 0 | Score: 1.66 | too far - skipped
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 0 | Score: 1.68 | too far - skipped
+RAG-5PASS  'is my hba1c normal' ranks the right report first and gives the right verdict  (best distance 0.75, top R3_lipid_one_sided.pdf, verdict above (expected above))
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 1 | Score: 0.74 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 1 | Score: 1.22 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 2 | Score: 1.37 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 2 | Score: 1.52 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 0 | Score: 1.67 | too far - skipped
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 0 | Score: 1.75 | too far - skipped
+RAG-6PASS  'is my haemoglobin low' ranks the right report first and gives the right verdict  (best distance 0.74, top R2_cbc_female_sexed.pdf, verdict below (expected below))
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 0 | Score: 1.43 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 2 | Score: 1.46 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 2 | Score: 1.47 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 1 | Score: 1.50 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 1 | Score: 1.52 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 0 | Score: 1.63 | used
+RAG-7PASS  'what is my albumin result' ranks the right report first and gives the right verdict  (best distance 1.43, top R4_lft_kft_to_ranges.pdf, verdict below (expected below))
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 2 | Score: 0.95 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 1 | Score: 1.29 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 1 | Score: 1.62 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 2 | Score: 1.64 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 0 | Score: 1.74 | too far - skipped
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 0 | Score: 1.86 | too far - skipped
+RAG-8PASS  'is my platelet count normal' ranks the right report first and gives the right verdict  (best distance 0.95, top R4_lft_kft_to_ranges.pdf, verdict within (expected within))
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 2 | Score: 1.44 | used
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 0 | Score: 1.52 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.53 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 0 | Score: 1.57 | used
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 1 | Score: 1.58 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 1.59 | used
+RAG-9PASS  Profile A cannot retrieve profile B's albumin report  (0 foreign chunks)
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 2 | Score: 1.57 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 1 | Score: 1.61 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 1 | Score: 1.62 | used
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 0 | Score: 1.65 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 2 | Score: 1.65 | too far - skipped
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 0 | Score: 1.66 | too far - skipped
+RAG-10PASS  Profile B cannot retrieve profile A's thyroid report  (TSH present: False)
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 3 | Score: 1.09 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 3 | Score: 1.09 | used
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 0 | Score: 1.70 | too far - skipped
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 2 | Score: 1.75 | too far - skipped
+Retrieved: R4_lft_kft_to_ranges.pdf | Chunk: 1 | Score: 1.75 | too far - skipped
+Retrieved: R2_cbc_female_sexed.pdf | Chunk: 0 | Score: 1.83 | too far - skipped
+RAG-11PASS  A summary request returns a whole report despite low similarity  (best distance 1.09, 8 chunks from ['R2_cbc_female_sexed.pdf', 'R4_lft_kft_to_ranges.pdf'])
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 0 | Score: 1.61 | used
+Retrieved: R1_cbc_male.pdf | Chunk: 1 | Score: 1.70 | too far - skipped
+Retrieved: R1_cbc_male.pdf | Chunk: 2 | Score: 1.74 | too far - skipped
+Retrieved: R3_lipid_one_sided.pdf | Chunk: 2 | Score: 1.83 | too far - skipped
+Retrieved: R5_thyroid_electrolytes.pdf | Chunk: 0 | Score: 1.86 | too far - skipped
+Retrieved: R1_cbc_male.pdf | Chunk: 0 | Score: 1.92 | too far - skipped
+RAG-12PASS  A general question is not a strong match, so external sources run  (best distance 1.61, strong-match gate 1.25)
+RAG-13PASS  Uploading the same report twice stores it once  (second upload skipped)
+RAG-14PASS  Patient sex from the header is stored on every chunk  (4/4 chunks tagged F)
+RAG-15PASS  Deleting profile A's reports leaves profile B's untouched  (A now (0, 0), B (2, 8))
+RAG-16FAIL  Knowledge base returns material for every on-topic question  (0/4 under its 1.0 threshold; best distances [None, None, None, None])
+
+15/16 retrieval scenarios passed

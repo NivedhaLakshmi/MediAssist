@@ -1,6 +1,3 @@
-from utils.constants import PUBMED_FILTERS
-
-
 def build_pubmed_query(question: str):
 
     return f"""

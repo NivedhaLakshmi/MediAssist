@@ -1,0 +1,24 @@
+CITYCARE DIAGNOSTIC LABORATORY
+Accredited Clinical Laboratory
+
+Patient Name : Mr. Daniel Tan           Age/Sex : 45/M
+Sample Date  : 12-03-2026               Ref. By : Dr. K. Menon
+
+COMPLETE BLOOD COUNT
+Test                    Result      Unit      Reference Range
+----------------------------------------------------------------------
+Haemoglobin             14.6        g/dL      13.0 - 17.0
+Total WBC Count         11800       /uL       4000 - 10000
+Neutrophils             72          %         40 - 75
+Lymphocytes             18          %         20 - 40
+Eosinophils             3           %         1 - 6
+Monocytes               5           %         2 - 10
+Platelet Count          245000      /uL       150000 - 410000
+RBC Count               4.9         mill/uL   4.5 - 5.9
+PCV                     44.1        %         40 - 50
+MCV                     88          fL        83 - 101
+MCH                     29.8        pg        27 - 32
+MCHC                    33.9        g/dL      31.5 - 34.5
+----------------------------------------------------------------------
+
+*** End of Report ***

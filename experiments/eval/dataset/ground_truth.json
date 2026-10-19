@@ -1,0 +1,307 @@
+{
+  "R1_cbc_male": {
+    "sex": "M",
+    "rows": [
+      {
+        "test": "Haemoglobin",
+        "value": "14.6",
+        "unit": "g/dL",
+        "range": "13.0 - 17.0",
+        "status": "within"
+      },
+      {
+        "test": "Total WBC Count",
+        "value": "11800",
+        "unit": "/uL",
+        "range": "4000 - 10000",
+        "status": "above"
+      },
+      {
+        "test": "Neutrophils",
+        "value": "72",
+        "unit": "%",
+        "range": "40 - 75",
+        "status": "within"
+      },
+      {
+        "test": "Lymphocytes",
+        "value": "18",
+        "unit": "%",
+        "range": "20 - 40",
+        "status": "below"
+      },
+      {
+        "test": "Eosinophils",
+        "value": "3",
+        "unit": "%",
+        "range": "1 - 6",
+        "status": "within"
+      },
+      {
+        "test": "Monocytes",
+        "value": "5",
+        "unit": "%",
+        "range": "2 - 10",
+        "status": "within"
+      },
+      {
+        "test": "Platelet Count",
+        "value": "245000",
+        "unit": "/uL",
+        "range": "150000 - 410000",
+        "status": "within"
+      },
+      {
+        "test": "RBC Count",
+        "value": "4.9",
+        "unit": "mill/uL",
+        "range": "4.5 - 5.9",
+        "status": "within"
+      },
+      {
+        "test": "PCV",
+        "value": "44.1",
+        "unit": "%",
+        "range": "40 - 50",
+        "status": "within"
+      },
+      {
+        "test": "MCV",
+        "value": "88",
+        "unit": "fL",
+        "range": "83 - 101",
+        "status": "within"
+      },
+      {
+        "test": "MCH",
+        "value": "29.8",
+        "unit": "pg",
+        "range": "27 - 32",
+        "status": "within"
+      },
+      {
+        "test": "MCHC",
+        "value": "33.9",
+        "unit": "g/dL",
+        "range": "31.5 - 34.5",
+        "status": "within"
+      }
+    ]
+  },
+  "R2_cbc_female_sexed": {
+    "sex": "F",
+    "rows": [
+      {
+        "test": "Haemoglobin",
+        "value": "11.4",
+        "unit": "g/dL",
+        "range": "M-13.0-17.0 F-12.0-15.0",
+        "status": "below"
+      },
+      {
+        "test": "PCV",
+        "value": "35.2",
+        "unit": "%",
+        "range": "M-40-50 F-36-46",
+        "status": "below"
+      },
+      {
+        "test": "RBC Count",
+        "value": "4.3",
+        "unit": "mill/uL",
+        "range": "M-4.5-5.9 F-3.8-4.8",
+        "status": "within"
+      },
+      {
+        "test": "Ferritin",
+        "value": "12",
+        "unit": "ng/mL",
+        "range": "M-30-400 F-13-150",
+        "status": "below"
+      },
+      {
+        "test": "ESR",
+        "value": "18",
+        "unit": "mm/hr",
+        "range": "M-0-15 F-0-20",
+        "status": "within"
+      },
+      {
+        "test": "Serum Creatinine",
+        "value": "0.7",
+        "unit": "mg/dL",
+        "range": "M-0.7-1.3 F-0.5-1.1",
+        "status": "within"
+      }
+    ]
+  },
+  "R3_lipid_one_sided": {
+    "sex": "M",
+    "rows": [
+      {
+        "test": "Total Cholesterol",
+        "value": "232",
+        "unit": "mg/dL",
+        "range": "< 200",
+        "status": "above"
+      },
+      {
+        "test": "Triglycerides",
+        "value": "140",
+        "unit": "mg/dL",
+        "range": "< 150",
+        "status": "within"
+      },
+      {
+        "test": "HDL Cholesterol",
+        "value": "38",
+        "unit": "mg/dL",
+        "range": "> 40",
+        "status": "below"
+      },
+      {
+        "test": "LDL Cholesterol",
+        "value": "162",
+        "unit": "mg/dL",
+        "range": "< 100",
+        "status": "above"
+      },
+      {
+        "test": "Fasting Glucose",
+        "value": "108",
+        "unit": "mg/dL",
+        "range": "70 - 100",
+        "status": "above"
+      },
+      {
+        "test": "HbA1c",
+        "value": "5.9",
+        "unit": "%",
+        "range": "4.0 - 5.6",
+        "status": "above"
+      }
+    ]
+  },
+  "R4_lft_kft_to_ranges": {
+    "sex": "F",
+    "rows": [
+      {
+        "test": "Total Bilirubin",
+        "value": "1.6",
+        "unit": "mg/dL",
+        "range": "0.3 to 1.2",
+        "status": "above"
+      },
+      {
+        "test": "SGOT",
+        "value": "32",
+        "unit": "U/L",
+        "range": "8 to 40",
+        "status": "within"
+      },
+      {
+        "test": "SGPT",
+        "value": "58",
+        "unit": "U/L",
+        "range": "5 to 35",
+        "status": "above"
+      },
+      {
+        "test": "Alkaline Phosphatase",
+        "value": "96",
+        "unit": "U/L",
+        "range": "44 to 147",
+        "status": "within"
+      },
+      {
+        "test": "Albumin",
+        "value": "3.2",
+        "unit": "g/dL",
+        "range": "3.5 to 5.0",
+        "status": "below"
+      },
+      {
+        "test": "Blood Urea Nitrogen",
+        "value": "14",
+        "unit": "mg/dL",
+        "range": "8 to 25",
+        "status": "within"
+      },
+      {
+        "test": "Serum Creatinine",
+        "value": "1.0",
+        "unit": "mg/dL",
+        "range": "0.6 to 1.2",
+        "status": "within"
+      },
+      {
+        "test": "Platelet Count",
+        "value": "1,80,000",
+        "unit": "/uL",
+        "range": "1,50,000 to 4,50,000",
+        "status": "within"
+      }
+    ]
+  },
+  "R5_thyroid_electrolytes": {
+    "sex": "M",
+    "rows": [
+      {
+        "test": "TSH",
+        "value": "6.8",
+        "unit": "uIU/mL",
+        "range": "0.4 - 4.0",
+        "status": "above"
+      },
+      {
+        "test": "Free T4",
+        "value": "1.1",
+        "unit": "ng/dL",
+        "range": "0.8 - 1.8",
+        "status": "within"
+      },
+      {
+        "test": "Sodium",
+        "value": "133",
+        "unit": "mmol/L",
+        "range": "135 - 145",
+        "status": "below"
+      },
+      {
+        "test": "Potassium",
+        "value": "4.2",
+        "unit": "mmol/L",
+        "range": "3.5 - 5.1",
+        "status": "within"
+      },
+      {
+        "test": "Chloride",
+        "value": "101",
+        "unit": "mmol/L",
+        "range": "98 - 107",
+        "status": "within"
+      },
+      {
+        "test": "Calcium",
+        "value": "9.4",
+        "unit": "mg/dL",
+        "range": "8.6 - 10.3",
+        "status": "within"
+      },
+      {
+        "test": "Vitamin D",
+        "value": "18",
+        "unit": "ng/mL",
+        "range": "30 - 100",
+        "status": "below"
+      },
+      {
+        "test": "Vitamin B12",
+        "value": "410",
+        "unit": "pg/mL",
+        "range": "200 - 900",
+        "status": "within"
+      }
+    ]
+  }
+}

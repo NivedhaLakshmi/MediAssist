@@ -1,0 +1,123 @@
+{
+  "scenarios": [
+    {
+      "id": "RAG-1",
+      "scenario": "'what is my TSH level' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 1.28, top R5_thyroid_electrolytes.pdf, verdict above (expected above)"
+    },
+    {
+      "id": "RAG-2",
+      "scenario": "'is my total cholesterol high' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 0.84, top R3_lipid_one_sided.pdf, verdict above (expected above)"
+    },
+    {
+      "id": "RAG-3",
+      "scenario": "'how is my white blood cell count' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 0.71, top R1_cbc_male.pdf, verdict above (expected above)"
+    },
+    {
+      "id": "RAG-4",
+      "scenario": "'is my sodium okay' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 1.17, top R5_thyroid_electrolytes.pdf, verdict below (expected below)"
+    },
+    {
+      "id": "RAG-5",
+      "scenario": "'is my hba1c normal' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 0.75, top R3_lipid_one_sided.pdf, verdict above (expected above)"
+    },
+    {
+      "id": "RAG-6",
+      "scenario": "'is my haemoglobin low' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 0.74, top R2_cbc_female_sexed.pdf, verdict below (expected below)"
+    },
+    {
+      "id": "RAG-7",
+      "scenario": "'what is my albumin result' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 1.43, top R4_lft_kft_to_ranges.pdf, verdict below (expected below)"
+    },
+    {
+      "id": "RAG-8",
+      "scenario": "'is my platelet count normal' ranks the right report first and gives the right verdict",
+      "passed": true,
+      "detail": "best distance 0.95, top R4_lft_kft_to_ranges.pdf, verdict within (expected within)"
+    },
+    {
+      "id": "RAG-9",
+      "scenario": "Profile A cannot retrieve profile B's albumin report",
+      "passed": true,
+      "detail": "0 foreign chunks"
+    },
+    {
+      "id": "RAG-10",
+      "scenario": "Profile B cannot retrieve profile A's thyroid report",
+      "passed": true,
+      "detail": "TSH present: False"
+    },
+    {
+      "id": "RAG-11",
+      "scenario": "A summary request returns a whole report despite low similarity",
+      "passed": true,
+      "detail": "best distance 1.09, 8 chunks from ['R2_cbc_female_sexed.pdf', 'R4_lft_kft_to_ranges.pdf']"
+    },
+    {
+      "id": "RAG-12",
+      "scenario": "A general question is not a strong match, so external sources run",
+      "passed": true,
+      "detail": "best distance 1.61, strong-match gate 1.25"
+    },
+    {
+      "id": "RAG-13",
+      "scenario": "Uploading the same report twice stores it once",
+      "passed": true,
+      "detail": "second upload skipped"
+    },
+    {
+      "id": "RAG-14",
+      "scenario": "Patient sex from the header is stored on every chunk",
+      "passed": true,
+      "detail": "4/4 chunks tagged F"
+    },
+    {
+      "id": "RAG-15",
+      "scenario": "Deleting profile A's reports leaves profile B's untouched",
+      "passed": true,
+      "detail": "A now (0, 0), B (2, 8)"
+    },
+    {
+      "id": "RAG-16",
+      "scenario": "Knowledge base returns material for every on-topic question",
+      "passed": false,
+      "detail": "2/4 under its 1.0 threshold; best distances [1.07, 1.08, 0.69, 0.82]"
+    }
+  ],
+  "kb_distances": [
+    [
+      "what is diabetes",
+      1.07
+    ],
+    [
+      "what causes high blood sugar",
+      1.08
+    ],
+    [
+      "symptoms of prediabetes",
+      0.69
+    ],
+    [
+      "how is prediabetes treated",
+      0.82
+    ],
+    [
+      "what is hba1c",
+      1.8
+    ]
+  ],
+  "run": "2026-10-15T08:17:42"
+}

@@ -1,63 +1,80 @@
 def format_patient_report_context(docs):
     """
     Convert retrieved patient report chunks into
-    LLM-friendly context grouped by report.
+    structured LLM-friendly context.
+
+    Chunks belonging to the same report are grouped together.
     """
+
+    if not docs:
+        return ""
 
     reports = {}
 
     for doc in docs:
 
-        report_name = doc.metadata.get(
-            "report_name",
-            "Unknown Report"
+        report_id = doc.metadata.get(
+            "report_id",
+            doc.metadata.get(
+                "report_name",
+                "unknown_report"
+            )
         )
 
-        report_type = doc.metadata.get(
-            "report_type",
-            "Unknown Type"
-        )
-
-        upload_date = doc.metadata.get(
-            "upload_date",
-            "Unknown Date"
-        )
-
-        if report_name not in reports:
-
-            reports[report_name] = {
-                "report_type": report_type,
-                "upload_date": upload_date,
+        if report_id not in reports:
+            reports[report_id] = {
+                "report_name": doc.metadata.get(
+                    "report_name",
+                    "Unknown Report"
+                ),
+                "report_type": doc.metadata.get(
+                    "report_type",
+                    "Medical Report"
+                ),
+                "upload_date": doc.metadata.get(
+                    "upload_date",
+                    "Unknown Date"
+                ),
                 "chunks": []
             }
 
-        reports[report_name]["chunks"].append(
-            doc.page_content
+        reports[report_id]["chunks"].append(doc)
+
+    context_parts = []
+
+    for report in reports.values():
+
+        # Sort chunks according to their original chunk number
+        report["chunks"].sort(
+            key=lambda doc: doc.metadata.get(
+                "chunk",
+                0
+            )
         )
 
-    context = ""
+        content = "\n\n".join(
+            doc.page_content
+            for doc in report["chunks"]
+        )
 
-    for report_name, report in reports.items():
+        context_parts.append(
+            f"""
+UPLOADED MEDICAL REPORT
 
-        context += f"""
-Report:
-{report_name}
+Report Name:
+{report["report_name"]}
 
-Type:
+Report Type:
 {report["report_type"]}
 
 Upload Date:
 {report["upload_date"]}
 
-Relevant Content:
+Report Content:
+{content}
+
+================================
 """
+        )
 
-        for chunk in report["chunks"]:
-
-            context += f"""
-{chunk}
-"""
-
-        context += "\n---\n"
-
-    return context.strip()
+    return "\n".join(context_parts).strip()
