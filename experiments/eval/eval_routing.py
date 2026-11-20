@@ -1,8 +1,8 @@
 """MCP source selection: the production model router against the keyword rules.
 
-28 questions with a known correct source. 16 are phrased with the
-words the keyword rules look for; 12 are phrased the way patients and
-nurses actually ask, without those words. The model router is the one
+40 questions with a known correct source, 10 per source: 5 phrased
+with the words the keyword rules look for and 5 phrased the way staff
+actually ask, without those words. The model router is the one
 the server uses, called directly.
 
     python experiments/eval/eval_routing.py
@@ -15,34 +15,54 @@ from common import ROOT, save
 
 CASES = [
     # (question, correct source, phrasing)
+    # 40 questions: 5 keyword-phrased and 5 naturally phrased per source.
+    # Keyword phrasing uses the words the keyword rules (or, for PubMed
+    # and MedlinePlus, the source's usual vocabulary) look for; natural
+    # phrasing is how staff actually ask, without those words.
+    # DailyMed
     ("what are the side effects of metformin", "dailymed", "keyword"),
     ("what is the usual dosage for amoxicillin", "dailymed", "keyword"),
     ("can i take ibuprofen with warfarin", "dailymed", "keyword"),
     ("what are the warnings for atorvastatin", "dailymed", "keyword"),
-    ("are there any clinical trials for type 2 diabetes", "clinical_trials", "keyword"),
-    ("what new treatments are being studied for psoriasis", "clinical_trials", "keyword"),
-    ("is there an ongoing study for alzheimer's disease", "clinical_trials", "keyword"),
-    ("any experimental therapy for sickle cell", "clinical_trials", "keyword"),
-    ("what is hypertension", "medlineplus", "keyword"),
-    ("what causes anaemia", "medlineplus", "keyword"),
-    ("how is asthma usually managed", "medlineplus", "keyword"),
-    ("what does a thyroid test measure", "medlineplus", "keyword"),
-    ("what is a complete blood count", "medlineplus", "keyword"),
-    ("what does high bilirubin mean", "medlineplus", "keyword"),
-    ("what is vitamin d deficiency", "medlineplus", "keyword"),
-    ("what is a normal sodium level", "medlineplus", "keyword"),
+    ("what are the contraindications for lisinopril", "dailymed", "keyword"),
     ("how much paracetamol for a 5 year old", "dailymed", "natural"),
     ("is amoxicillin okay during pregnancy", "dailymed", "natural"),
     ("atorvastatin and grapefruit", "dailymed", "natural"),
     ("what happens if i take too much metformin", "dailymed", "natural"),
     ("is dolo 650 safe for a child", "dailymed", "natural"),
+    # ClinicalTrials.gov
+    ("are there any clinical trials for type 2 diabetes", "clinical_trials", "keyword"),
+    ("what new treatments are being studied for psoriasis", "clinical_trials", "keyword"),
+    ("is there an ongoing study for alzheimer's disease", "clinical_trials", "keyword"),
+    ("any experimental therapy for sickle cell", "clinical_trials", "keyword"),
+    ("are there clinical trials for long covid", "clinical_trials", "keyword"),
     ("what is in the pipeline for als", "clinical_trials", "natural"),
     ("is anything being developed for huntington's disease", "clinical_trials", "natural"),
     ("are researchers testing anything for parkinson's", "clinical_trials", "natural"),
+    ("anything new coming for type 1 diabetes in children", "clinical_trials", "natural"),
+    ("is there a study my patient with lung cancer could join", "clinical_trials", "natural"),
+    # MedlinePlus
+    ("what is hypertension", "medlineplus", "keyword"),
+    ("what causes anaemia", "medlineplus", "keyword"),
+    ("what does a thyroid test measure", "medlineplus", "keyword"),
+    ("what is a complete blood count", "medlineplus", "keyword"),
+    ("what is vitamin d deficiency", "medlineplus", "keyword"),
+    ("my patient gets dizzy when she stands up, why", "medlineplus", "natural"),
+    ("why do ankles swell in the evening", "medlineplus", "natural"),
+    ("patient says their heart races after coffee, should i worry", "medlineplus", "natural"),
+    ("how do i explain gout to a patient", "medlineplus", "natural"),
+    ("patient's skin looks yellow, what could that be", "medlineplus", "natural"),
+    # PubMed
+    ("what do studies show about green tea and blood pressure", "pubmed", "keyword"),
+    ("is there published evidence on probiotics for eczema", "pubmed", "keyword"),
+    ("what does the research say about screen time and sleep in children", "pubmed", "keyword"),
+    ("systematic reviews on acupuncture for back pain", "pubmed", "keyword"),
+    ("meta-analysis of exercise for depression", "pubmed", "keyword"),
     ("what do studies show about vitamin d supplementation", "pubmed", "natural"),
     ("is there evidence linking sleep and immune function", "pubmed", "natural"),
     ("has intermittent fasting been shown to help", "pubmed", "natural"),
     ("what is the current scientific consensus on red meat", "pubmed", "natural"),
+    ("is it proven that vitamin c prevents colds", "pubmed", "natural"),
 ]
 
 # Run inside the server's directory, whose own utils package would

@@ -1,0 +1,21 @@
+{
+  "llama3.2": {
+    "mean_seconds": 1.85,
+    "median_seconds": 1.46,
+    "max_seconds": 4.21,
+    "passed_this_run": 13
+  },
+  "llama3": {
+    "mean_seconds": 3.63,
+    "median_seconds": 3.07,
+    "max_seconds": 8.02,
+    "passed_this_run": 14
+  },
+  "qwen2.5:7b-instruct": {
+    "mean_seconds": 3.89,
+    "median_seconds": 3.71,
+    "max_seconds": 7.2,
+    "passed_this_run": 18
+  },
+  "run": "2026-11-20T10:18:08"
+}

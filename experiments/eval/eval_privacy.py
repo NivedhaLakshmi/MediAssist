@@ -143,5 +143,109 @@ record("PRV-9", "Model runtime and source gateway are reached on this machine on
        "127.0.0.1:8000" in srcs and 'host="127.0.0.1"' in srcs,
        "gateway bound to 127.0.0.1:8000; model runtime at 127.0.0.1:11434")
 
+# ---- Added for the extended evaluation (PRV-12 to PRV-20) ----
+
+# PRV-12 every synthetic report, photographed, adds nothing to searches
+synth = sorted((ROOT / "experiments/eval/dataset").glob("R*/report.txt"))
+added12 = [photo_search_terms([(p.read_text(), [])]) for p in synth]
+record("PRV-12", "None of the 5 synthetic reports, photographed, adds words to outside searches",
+       len(synth) == 5 and all(a == "" for a in added12),
+       f"{len(synth)} reports contributed {sum(len(a.split()) for a in added12)} terms")
+
+# PRV-13 / PRV-14 the 40 source-selection questions: what goes out, and where
+import ast  # noqa: E402
+_src = (ROOT / "experiments/eval/eval_routing.py").read_text()
+_a = _src.index("CASES = [")
+CASES40 = ast.literal_eval(_src[_a + 8:_src.index("]\n", _a) + 1])
+pairs = []
+for q, _, _ in CASES40:
+    n = normalize_health_query(q)["normalized"]
+    pairs.append((build_search_keywords(n), n, q))
+probe40 = "\n".join([
+    "import sys, json, requests",
+    "sys.path.insert(0, '.')",
+    "sent = []",
+    "CUR = ''",
+    "class R:",
+    "    status_code = 200",
+    "    content = b'<x/>'",
+    "    text = '<x/>'",
+    "    def json(self): return {}",
+    "    def raise_for_status(self): pass",
+    "def fake_get(url, params=None, **kw):",
+    "    sent.append({'url': url, 'params': params, 'q': CUR})",
+    "    return R()",
+    "requests.get = fake_get",
+    "from utils import model_router",
+    "model_router.ROUTING_MODE = 'rules'",
+    "from tools.search import search_medical_sources",
+    "for kw, norm, q in json.loads(sys.argv[1]):",
+    "    CUR = q",
+    "    search_medical_sources(kw, norm)",
+    "print('SENT=' + json.dumps(sent))",
+])
+out40 = subprocess.run([sys.executable, "-c", probe40, json.dumps(pairs)], cwd=ROOT / "medical_mcp",
+                       capture_output=True, text=True).stdout
+sent40 = json.loads(out40.split("SENT=")[-1]) if "SENT=" in out40 else []
+full_sent = sorted({s["q"] for s in sent40
+                    if s["q"].lower() in json.dumps([s["url"], s["params"]]).lower()})
+asked = {s["q"] for s in sent40}
+record("PRV-13", "Across the 40 source questions, the full question is never sent outside",
+       len(asked) == 40 and not full_sent,
+       f"{len(asked)} questions searched; full question found in requests for {len(full_sent)}")
+allowed = {"clinicaltrials.gov", "dailymed.nlm.nih.gov", "eutils.ncbi.nlm.nih.gov", "wsearch.nlm.nih.gov"}
+hosts40 = sorted({re.sub(r"^https?://([^/]+).*", r"\1", s["url"]) for s in sent40})
+record("PRV-14", "Outside requests go only to the four public medical sources",
+       bool(sent40) and set(hosts40) <= allowed, f"{len(sent40)} requests to {hosts40}")
+
+# PRV-15 Google Drive is requested read-only
+from services import google_drive_auth  # noqa: E402
+_auth = (ROOT / "services" / "google_drive_auth.py").read_text()
+_scope = google_drive_auth.GOOGLE_DRIVE_SCOPE.strip()
+record("PRV-15", "The record tool asks Google Drive for read-only access",
+       _scope == "https://www.googleapis.com/auth/drive.readonly"
+       and "auth/drive.file" not in _auth and '"https://www.googleapis.com/auth/drive"' not in _auth,
+       f"scope {_scope}")
+
+# PRV-16 one profile's export holds none of another profile's chats
+user_data.save_conversation("c3", [{"role": "user", "content": "PROFILE-A-ONLY question"},
+                                   {"role": "assistant", "content": "ok"}], profile_id="A")
+user_data.save_conversation("c4", [{"role": "user", "content": "PROFILE-B-ONLY question"},
+                                   {"role": "assistant", "content": "ok"}], profile_id="B")
+za = zipfile.ZipFile(io.BytesIO(user_data.build_export_archive(user_data.load_conversations("A"), [])))
+ta = " ".join(za.read(n).decode(errors="ignore") for n in za.namelist())
+record("PRV-16", "A profile's data export contains none of another profile's chats",
+       "PROFILE-A-ONLY" in ta and "PROFILE-B-ONLY" not in ta,
+       f"A's export has A's chat: {'PROFILE-A-ONLY' in ta}; has B's chat: {'PROFILE-B-ONLY' in ta}")
+
+# PRV-17 the app's "Delete this profile" steps leave no chats or photos on disk
+pid = profiles.create_profile("Privacy Test Patient")
+user_data.save_conversation("c17", [{"role": "user", "content": "PRV17 question"},
+                                    {"role": "assistant", "content": "ok"}], profile_id=pid)
+attachments.save_attachment(b"\x89PNG fake17", "r.png", profile_id=pid)
+pdir = profiles.profile_directory(pid)
+user_data.delete_all_conversations(pid)   # same steps as app.py's delete button
+attachments.delete_all_attachments(pid)
+profiles.delete_profile(pid)
+left17 = [os.path.relpath(os.path.join(d, f), pdir) for d, _, fs in os.walk(pdir) for f in fs] if os.path.exists(pdir) else []
+record("PRV-17", "Deleting a patient profile in the app leaves none of its chats or photos on disk",
+       not left17, f"files left after delete: {left17 or 'none'}")
+
+# PRV-18 deleting a profile's photos removes every one of them
+names18 = [attachments.save_attachment(b"\x89PNG fake" + bytes([i]), f"p{i}.png", profile_id="B") for i in range(3)]
+attachments.delete_all_attachments("B")
+record("PRV-18", "Deleting a profile's photos removes every stored photo",
+       all(attachments.attachment_path(n, "B") is None for n in names18), f"{len(names18)} photos stored, then deleted")
+
+# PRV-19 stored photos do not keep the original file name
+n19 = attachments.save_attachment(b"\x89PNG fake19", "daniel_tan_report.png", profile_id="A")
+record("PRV-19", "A stored photo does not keep its original file name",
+       "daniel" not in n19.lower() and "tan" not in n19.lower(), f"saved 'daniel_tan_report.png' as {n19}")
+
+# PRV-20 a patient's name typed into a question is not sent outside
+kw20 = build_search_keywords(normalize_health_query("is daniel tan's wbc count normal")["normalized"])
+record("PRV-20", "A patient's name typed into a question is not sent as a search keyword",
+       "daniel" not in kw20 and "tan" not in kw20.split(), f"keywords '{kw20}'")
+
 print(f"\n{sum(s['passed'] for s in scenarios)}/{len(scenarios)} privacy scenarios passed")
 save("privacy", {"scenarios": scenarios})

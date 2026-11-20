@@ -2,31 +2,43 @@ OK  model=dailymed        OK  rules=dailymed        keyword what are the side ef
 OK  model=dailymed        OK  rules=dailymed        keyword what is the usual dosage for amoxicillin
 OK  model=dailymed        OK  rules=dailymed        keyword can i take ibuprofen with warfarin
 OK  model=dailymed        OK  rules=dailymed        keyword what are the warnings for atorvastatin
-OK  model=clinical_trials OK  rules=clinical_trials keyword are there any clinical trials for type 2 diabetes
-OK  model=clinical_trials OK  rules=clinical_trials keyword what new treatments are being studied for psoriasis
-OK  model=clinical_trials OK  rules=clinical_trials keyword is there an ongoing study for alzheimer's disease
-OK  model=clinical_trials OK  rules=clinical_trials keyword any experimental therapy for sickle cell
-OK  model=medlineplus     OK  rules=medlineplus     keyword what is hypertension
-OK  model=medlineplus     OK  rules=medlineplus     keyword what causes anaemia
-OK  model=medlineplus     OK  rules=medlineplus     keyword how is asthma usually managed
-OK  model=medlineplus     OK  rules=medlineplus     keyword what does a thyroid test measure
-OK  model=medlineplus     OK  rules=medlineplus     keyword what is a complete blood count
-OK  model=medlineplus     OK  rules=medlineplus     keyword what does high bilirubin mean
-OK  model=medlineplus     OK  rules=medlineplus     keyword what is vitamin d deficiency
-OK  model=medlineplus     OK  rules=medlineplus     keyword what is a normal sodium level
+OK  model=dailymed        OK  rules=dailymed        keyword what are the contraindications for lisinopril
 OK  model=dailymed        BAD rules=medlineplus     natural how much paracetamol for a 5 year old
 OK  model=dailymed        BAD rules=medlineplus     natural is amoxicillin okay during pregnancy
 OK  model=dailymed        BAD rules=medlineplus     natural atorvastatin and grapefruit
 OK  model=dailymed        BAD rules=medlineplus     natural what happens if i take too much metformin
 OK  model=dailymed        BAD rules=medlineplus     natural is dolo 650 safe for a child
+OK  model=clinical_trials OK  rules=clinical_trials keyword are there any clinical trials for type 2 diabetes
+OK  model=clinical_trials OK  rules=clinical_trials keyword what new treatments are being studied for psoriasis
+OK  model=clinical_trials OK  rules=clinical_trials keyword is there an ongoing study for alzheimer's disease
+OK  model=clinical_trials OK  rules=clinical_trials keyword any experimental therapy for sickle cell
+OK  model=clinical_trials OK  rules=clinical_trials keyword are there clinical trials for long covid
 OK  model=clinical_trials BAD rules=medlineplus     natural what is in the pipeline for als
 OK  model=clinical_trials BAD rules=medlineplus     natural is anything being developed for huntington's disease
 OK  model=clinical_trials BAD rules=medlineplus     natural are researchers testing anything for parkinson's
+OK  model=clinical_trials BAD rules=medlineplus     natural anything new coming for type 1 diabetes in children
+OK  model=clinical_trials BAD rules=medlineplus     natural is there a study my patient with lung cancer could join
+OK  model=medlineplus     OK  rules=medlineplus     keyword what is hypertension
+OK  model=medlineplus     OK  rules=medlineplus     keyword what causes anaemia
+OK  model=medlineplus     OK  rules=medlineplus     keyword what does a thyroid test measure
+OK  model=medlineplus     OK  rules=medlineplus     keyword what is a complete blood count
+OK  model=medlineplus     OK  rules=medlineplus     keyword what is vitamin d deficiency
+OK  model=medlineplus     OK  rules=medlineplus     natural my patient gets dizzy when she stands up, why
+OK  model=medlineplus     OK  rules=medlineplus     natural why do ankles swell in the evening
+BAD model=dailymed        OK  rules=medlineplus     natural patient says their heart races after coffee, should i worry
+OK  model=medlineplus     OK  rules=medlineplus     natural how do i explain gout to a patient
+OK  model=medlineplus     OK  rules=medlineplus     natural patient's skin looks yellow, what could that be
+OK  model=pubmed          BAD rules=medlineplus     keyword what do studies show about green tea and blood pressure
+OK  model=pubmed          BAD rules=medlineplus     keyword is there published evidence on probiotics for eczema
+OK  model=pubmed          BAD rules=medlineplus     keyword what does the research say about screen time and sleep in children
+OK  model=pubmed          BAD rules=medlineplus     keyword systematic reviews on acupuncture for back pain
+OK  model=pubmed          BAD rules=medlineplus     keyword meta-analysis of exercise for depression
 OK  model=pubmed          BAD rules=medlineplus     natural what do studies show about vitamin d supplementation
 OK  model=pubmed          BAD rules=medlineplus     natural is there evidence linking sleep and immune function
 OK  model=pubmed          BAD rules=medlineplus     natural has intermittent fasting been shown to help
 OK  model=pubmed          BAD rules=medlineplus     natural what is the current scientific consensus on red meat
-keyword  model 16/16   rules 16/16
-natural  model 12/12   rules 0/12
-all      model 28/28   rules 16/28
-mean routing time 1.20s
+OK  model=pubmed          BAD rules=medlineplus     natural is it proven that vitamin c prevents colds
+keyword  model 20/20   rules 15/20
+natural  model 19/20   rules 5/20
+all      model 39/40   rules 20/40
+mean routing time 1.95s

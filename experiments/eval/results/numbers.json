@@ -1,0 +1,18 @@
+{
+  "Llama 3.2 3B": {
+    "answers": 20,
+    "with_invented_numbers": 0,
+    "flagged": []
+  },
+  "Llama 3 8B": {
+    "answers": 20,
+    "with_invented_numbers": 0,
+    "flagged": []
+  },
+  "Qwen 2.5 7B": {
+    "answers": 20,
+    "with_invented_numbers": 0,
+    "flagged": []
+  },
+  "run": "2026-11-20T10:10:16"
+}

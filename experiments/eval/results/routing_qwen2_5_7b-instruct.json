@@ -7,7 +7,7 @@
       "phrasing": "keyword",
       "rules": "dailymed",
       "model": "dailymed",
-      "seconds": 3.93,
+      "seconds": 8.02,
       "model_ok": true,
       "rules_ok": true
     },
@@ -17,7 +17,7 @@
       "phrasing": "keyword",
       "rules": "dailymed",
       "model": "dailymed",
-      "seconds": 1.55,
+      "seconds": 2.07,
       "model_ok": true,
       "rules_ok": true
     },
@@ -27,7 +27,7 @@
       "phrasing": "keyword",
       "rules": "dailymed",
       "model": "dailymed",
-      "seconds": 1.72,
+      "seconds": 1.95,
       "model_ok": true,
       "rules_ok": true
     },
@@ -37,127 +37,17 @@
       "phrasing": "keyword",
       "rules": "dailymed",
       "model": "dailymed",
-      "seconds": 1.59,
+      "seconds": 1.93,
       "model_ok": true,
       "rules_ok": true
     },
     {
-      "question": "are there any clinical trials for type 2 diabetes",
-      "correct": "clinical_trials",
+      "question": "what are the contraindications for lisinopril",
+      "correct": "dailymed",
       "phrasing": "keyword",
-      "rules": "clinical_trials",
-      "model": "clinical_trials",
-      "seconds": 1.6,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what new treatments are being studied for psoriasis",
-      "correct": "clinical_trials",
-      "phrasing": "keyword",
-      "rules": "clinical_trials",
-      "model": "clinical_trials",
-      "seconds": 1.5,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "is there an ongoing study for alzheimer's disease",
-      "correct": "clinical_trials",
-      "phrasing": "keyword",
-      "rules": "clinical_trials",
-      "model": "clinical_trials",
-      "seconds": 1.61,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "any experimental therapy for sickle cell",
-      "correct": "clinical_trials",
-      "phrasing": "keyword",
-      "rules": "clinical_trials",
-      "model": "clinical_trials",
-      "seconds": 1.54,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what is hypertension",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.43,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what causes anaemia",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.42,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "how is asthma usually managed",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.52,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what does a thyroid test measure",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.5,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what is a complete blood count",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.52,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what does high bilirubin mean",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.64,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what is vitamin d deficiency",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.83,
-      "model_ok": true,
-      "rules_ok": true
-    },
-    {
-      "question": "what is a normal sodium level",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "medlineplus",
-      "seconds": 1.68,
+      "rules": "dailymed",
+      "model": "dailymed",
+      "seconds": 1.9,
       "model_ok": true,
       "rules_ok": true
     },
@@ -167,7 +57,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "dailymed",
-      "seconds": 1.78,
+      "seconds": 2.05,
       "model_ok": true,
       "rules_ok": false
     },
@@ -177,7 +67,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "dailymed",
-      "seconds": 1.56,
+      "seconds": 1.73,
       "model_ok": true,
       "rules_ok": false
     },
@@ -187,7 +77,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "dailymed",
-      "seconds": 1.76,
+      "seconds": 2.08,
       "model_ok": true,
       "rules_ok": false
     },
@@ -197,7 +87,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "dailymed",
-      "seconds": 1.57,
+      "seconds": 1.91,
       "model_ok": true,
       "rules_ok": false
     },
@@ -207,9 +97,59 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "dailymed",
-      "seconds": 1.75,
+      "seconds": 2.04,
       "model_ok": true,
       "rules_ok": false
+    },
+    {
+      "question": "are there any clinical trials for type 2 diabetes",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.8,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what new treatments are being studied for psoriasis",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.72,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "is there an ongoing study for alzheimer's disease",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.89,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "any experimental therapy for sickle cell",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.83,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "are there clinical trials for long covid",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.73,
+      "model_ok": true,
+      "rules_ok": true
     },
     {
       "question": "what is in the pipeline for als",
@@ -217,7 +157,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "clinical_trials",
-      "seconds": 1.45,
+      "seconds": 1.64,
       "model_ok": true,
       "rules_ok": false
     },
@@ -227,7 +167,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "clinical_trials",
-      "seconds": 1.68,
+      "seconds": 2.2,
       "model_ok": true,
       "rules_ok": false
     },
@@ -237,7 +177,177 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "clinical_trials",
-      "seconds": 1.56,
+      "seconds": 2.3,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "anything new coming for type 1 diabetes in children",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "clinical_trials",
+      "seconds": 2.19,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is there a study my patient with lung cancer could join",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "clinical_trials",
+      "seconds": 1.8,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what is hypertension",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.95,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what causes anaemia",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.8,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what does a thyroid test measure",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.85,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is a complete blood count",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.74,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is vitamin d deficiency",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.77,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "my patient gets dizzy when she stands up, why",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.87,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "why do ankles swell in the evening",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.93,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "patient says their heart races after coffee, should i worry",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.66,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "how do i explain gout to a patient",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.67,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "patient's skin looks yellow, what could that be",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.65,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what do studies show about green tea and blood pressure",
+      "correct": "pubmed",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.8,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is there published evidence on probiotics for eczema",
+      "correct": "pubmed",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.94,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what does the research say about screen time and sleep in children",
+      "correct": "pubmed",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 2.02,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "systematic reviews on acupuncture for back pain",
+      "correct": "pubmed",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.95,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "meta-analysis of exercise for depression",
+      "correct": "pubmed",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.71,
       "model_ok": true,
       "rules_ok": false
     },
@@ -247,7 +357,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "pubmed",
-      "seconds": 1.55,
+      "seconds": 1.81,
       "model_ok": true,
       "rules_ok": false
     },
@@ -257,7 +367,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "pubmed",
-      "seconds": 1.49,
+      "seconds": 1.87,
       "model_ok": true,
       "rules_ok": false
     },
@@ -267,7 +377,7 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "pubmed",
-      "seconds": 1.55,
+      "seconds": 1.87,
       "model_ok": true,
       "rules_ok": false
     },
@@ -277,10 +387,20 @@
       "phrasing": "natural",
       "rules": "medlineplus",
       "model": "pubmed",
-      "seconds": 1.44,
+      "seconds": 1.69,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is it proven that vitamin c prevents colds",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.87,
       "model_ok": true,
       "rules_ok": false
     }
   ],
-  "run": "2026-10-16T14:26:12"
+  "run": "2026-11-20T07:09:19"
 }

@@ -7,7 +7,7 @@
       "phrasing": "keyword",
       "rules": "dailymed",
       "model": "fallback",
-      "seconds": 0.08,
+      "seconds": 0.11,
       "model_ok": false,
       "rules_ok": true
     },
@@ -40,6 +40,66 @@
       "seconds": 0.02,
       "model_ok": false,
       "rules_ok": true
+    },
+    {
+      "question": "what are the contraindications for lisinopril",
+      "correct": "dailymed",
+      "phrasing": "keyword",
+      "rules": "dailymed",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "how much paracetamol for a 5 year old",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "is amoxicillin okay during pregnancy",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "atorvastatin and grapefruit",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "what happens if i take too much metformin",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.03,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "is dolo 650 safe for a child",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
     },
     {
       "question": "are there any clinical trials for type 2 diabetes",
@@ -82,27 +142,77 @@
       "rules_ok": true
     },
     {
+      "question": "are there clinical trials for long covid",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "what is in the pipeline for als",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "is anything being developed for huntington's disease",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "are researchers testing anything for parkinson's",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "anything new coming for type 1 diabetes in children",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
+      "question": "is there a study my patient with lung cancer could join",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
+    },
+    {
       "question": "what is hypertension",
       "correct": "medlineplus",
       "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
-      "seconds": 0.02,
+      "seconds": 0.08,
       "model_ok": false,
       "rules_ok": true
     },
     {
       "question": "what causes anaemia",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "fallback",
-      "seconds": 0.02,
-      "model_ok": false,
-      "rules_ok": true
-    },
-    {
-      "question": "how is asthma usually managed",
       "correct": "medlineplus",
       "phrasing": "keyword",
       "rules": "medlineplus",
@@ -132,16 +242,6 @@
       "rules_ok": true
     },
     {
-      "question": "what does high bilirubin mean",
-      "correct": "medlineplus",
-      "phrasing": "keyword",
-      "rules": "medlineplus",
-      "model": "fallback",
-      "seconds": 0.02,
-      "model_ok": false,
-      "rules_ok": true
-    },
-    {
       "question": "what is vitamin d deficiency",
       "correct": "medlineplus",
       "phrasing": "keyword",
@@ -152,9 +252,9 @@
       "rules_ok": true
     },
     {
-      "question": "what is a normal sodium level",
+      "question": "my patient gets dizzy when she stands up, why",
       "correct": "medlineplus",
-      "phrasing": "keyword",
+      "phrasing": "natural",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -162,9 +262,49 @@
       "rules_ok": true
     },
     {
-      "question": "how much paracetamol for a 5 year old",
-      "correct": "dailymed",
+      "question": "why do ankles swell in the evening",
+      "correct": "medlineplus",
       "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "patient says their heart races after coffee, should i worry",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "how do i explain gout to a patient",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.03,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "patient's skin looks yellow, what could that be",
+      "correct": "medlineplus",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": true
+    },
+    {
+      "question": "what do studies show about green tea and blood pressure",
+      "correct": "pubmed",
+      "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -172,9 +312,9 @@
       "rules_ok": false
     },
     {
-      "question": "is amoxicillin okay during pregnancy",
-      "correct": "dailymed",
-      "phrasing": "natural",
+      "question": "is there published evidence on probiotics for eczema",
+      "correct": "pubmed",
+      "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -182,9 +322,9 @@
       "rules_ok": false
     },
     {
-      "question": "atorvastatin and grapefruit",
-      "correct": "dailymed",
-      "phrasing": "natural",
+      "question": "what does the research say about screen time and sleep in children",
+      "correct": "pubmed",
+      "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -192,9 +332,9 @@
       "rules_ok": false
     },
     {
-      "question": "what happens if i take too much metformin",
-      "correct": "dailymed",
-      "phrasing": "natural",
+      "question": "systematic reviews on acupuncture for back pain",
+      "correct": "pubmed",
+      "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -202,39 +342,9 @@
       "rules_ok": false
     },
     {
-      "question": "is dolo 650 safe for a child",
-      "correct": "dailymed",
-      "phrasing": "natural",
-      "rules": "medlineplus",
-      "model": "fallback",
-      "seconds": 0.05,
-      "model_ok": false,
-      "rules_ok": false
-    },
-    {
-      "question": "what is in the pipeline for als",
-      "correct": "clinical_trials",
-      "phrasing": "natural",
-      "rules": "medlineplus",
-      "model": "fallback",
-      "seconds": 0.02,
-      "model_ok": false,
-      "rules_ok": false
-    },
-    {
-      "question": "is anything being developed for huntington's disease",
-      "correct": "clinical_trials",
-      "phrasing": "natural",
-      "rules": "medlineplus",
-      "model": "fallback",
-      "seconds": 0.02,
-      "model_ok": false,
-      "rules_ok": false
-    },
-    {
-      "question": "are researchers testing anything for parkinson's",
-      "correct": "clinical_trials",
-      "phrasing": "natural",
+      "question": "meta-analysis of exercise for depression",
+      "correct": "pubmed",
+      "phrasing": "keyword",
       "rules": "medlineplus",
       "model": "fallback",
       "seconds": 0.02,
@@ -280,7 +390,17 @@
       "seconds": 0.02,
       "model_ok": false,
       "rules_ok": false
+    },
+    {
+      "question": "is it proven that vitamin c prevents colds",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "fallback",
+      "seconds": 0.02,
+      "model_ok": false,
+      "rules_ok": false
     }
   ],
-  "run": "2026-10-16T14:20:36"
+  "run": "2026-11-20T07:10:06"
 }

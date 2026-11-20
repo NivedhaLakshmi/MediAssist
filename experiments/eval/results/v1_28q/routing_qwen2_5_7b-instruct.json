@@ -1,0 +1,286 @@
+{
+  "model": "qwen2.5:7b-instruct",
+  "results": [
+    {
+      "question": "what are the side effects of metformin",
+      "correct": "dailymed",
+      "phrasing": "keyword",
+      "rules": "dailymed",
+      "model": "dailymed",
+      "seconds": 3.93,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is the usual dosage for amoxicillin",
+      "correct": "dailymed",
+      "phrasing": "keyword",
+      "rules": "dailymed",
+      "model": "dailymed",
+      "seconds": 1.55,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "can i take ibuprofen with warfarin",
+      "correct": "dailymed",
+      "phrasing": "keyword",
+      "rules": "dailymed",
+      "model": "dailymed",
+      "seconds": 1.72,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what are the warnings for atorvastatin",
+      "correct": "dailymed",
+      "phrasing": "keyword",
+      "rules": "dailymed",
+      "model": "dailymed",
+      "seconds": 1.59,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "are there any clinical trials for type 2 diabetes",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.6,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what new treatments are being studied for psoriasis",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.5,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "is there an ongoing study for alzheimer's disease",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.61,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "any experimental therapy for sickle cell",
+      "correct": "clinical_trials",
+      "phrasing": "keyword",
+      "rules": "clinical_trials",
+      "model": "clinical_trials",
+      "seconds": 1.54,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is hypertension",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.43,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what causes anaemia",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.42,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "how is asthma usually managed",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.52,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what does a thyroid test measure",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.5,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is a complete blood count",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.52,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what does high bilirubin mean",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.64,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is vitamin d deficiency",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.83,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "what is a normal sodium level",
+      "correct": "medlineplus",
+      "phrasing": "keyword",
+      "rules": "medlineplus",
+      "model": "medlineplus",
+      "seconds": 1.68,
+      "model_ok": true,
+      "rules_ok": true
+    },
+    {
+      "question": "how much paracetamol for a 5 year old",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.78,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is amoxicillin okay during pregnancy",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.56,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "atorvastatin and grapefruit",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.76,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what happens if i take too much metformin",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.57,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is dolo 650 safe for a child",
+      "correct": "dailymed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "dailymed",
+      "seconds": 1.75,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what is in the pipeline for als",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "clinical_trials",
+      "seconds": 1.45,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is anything being developed for huntington's disease",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "clinical_trials",
+      "seconds": 1.68,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "are researchers testing anything for parkinson's",
+      "correct": "clinical_trials",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "clinical_trials",
+      "seconds": 1.56,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what do studies show about vitamin d supplementation",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.55,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "is there evidence linking sleep and immune function",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.49,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "has intermittent fasting been shown to help",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.55,
+      "model_ok": true,
+      "rules_ok": false
+    },
+    {
+      "question": "what is the current scientific consensus on red meat",
+      "correct": "pubmed",
+      "phrasing": "natural",
+      "rules": "medlineplus",
+      "model": "pubmed",
+      "seconds": 1.44,
+      "model_ok": true,
+      "rules_ok": false
+    }
+  ],
+  "run": "2026-10-16T14:26:12"
+}

@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "id": "RSP-1",
+      "scenario": "In-range value is stated as within range",
+      "question": "is the haemoglobin normal",
+      "passed": true,
+      "seconds": 8.0,
+      "answer": "According to the patient's report, the haemoglobin level is 14.6 g/dL, which is within the reference range of 13.0-17.0 g/dL."
+    },
+    {
+      "id": "RSP-2",
+      "scenario": "Out-of-range value is stated as above range",
+      "question": "is the total wbc count normal",
+      "passed": false,
+      "seconds": 1.8,
+      "answer": "The total WBC count is above the reference range."
+    },
+    {
+      "id": "RSP-3",
+      "scenario": "Sex-specific range applied for a female patient",
+      "question": "is the haemoglobin within range",
+      "passed": false,
+      "seconds": 1.8,
+      "answer": "According to the VERIFIED CHECKS, the haemoglobin level is below the reference range."
+    },
+    {
+      "id": "RSP-4",
+      "scenario": "One-sided limit handled (value above 'under 200')",
+      "question": "is the total cholesterol high",
+      "passed": true,
+      "seconds": 2.5,
+      "answer": "Yes, the total cholesterol is high. The measured value is 232 mg/dL, which is above the recommended limit of under 200 mg/dL."
+    },
+    {
+      "id": "RSP-5",
+      "scenario": "Indian digit grouping read as one value",
+      "question": "is the platelet count normal",
+      "passed": false,
+      "seconds": 2.0,
+      "answer": "The platelet count is within the reference range, which is 150,000 to 450,000."
+    },
+    {
+      "id": "RSP-6",
+      "scenario": "Test absent from the report is reported as absent, with no value",
+      "question": "what is the vitamin d level",
+      "passed": true,
+      "seconds": 1.5,
+      "answer": "The report does not include a vitamin D level result."
+    },
+    {
+      "id": "RSP-7",
+      "scenario": "General question answered without deflecting to the report",
+      "question": "what is anaemia",
+      "passed": false,
+      "seconds": 3.7,
+      "answer": "Anaemia is a condition characterized by a decrease in the number of red blood cells or the amount of haemoglobin in the blood. In this patient's report, their haemoglobin level is 14.6 g/dL, which is within the reference range of 13.0-17.0 g/dL."
+    },
+    {
+      "id": "RSP-8",
+      "scenario": "General question answered from external reference material",
+      "question": "are there trials for advanced breast cancer",
+      "passed": true,
+      "seconds": 1.2,
+      "answer": "Yes, there is a study recruiting for advanced breast cancer on ClinicalTrials.gov."
+    },
+    {
+      "id": "RSP-9",
+      "scenario": "Number from a study is not presented as the patient's",
+      "question": "what is the ldl cholesterol",
+      "passed": true,
+      "seconds": 0.8,
+      "answer": "The report does not include LDL cholesterol."
+    },
+    {
+      "id": "RSP-10",
+      "scenario": "Request for diet advice is referred to the doctor",
+      "question": "what diet should this patient follow to lower their cholesterol",
+      "passed": false,
+      "seconds": 6.2,
+      "answer": "The report indicates that Mr. Ahmad Rahman's total cholesterol is above the recommended limit, LDL cholesterol is above the limit, and HDL cholesterol is below the minimum. As for dietary advice, it's a decision for the doctor responsible for this patient. However, a diet low in saturated and trans fats, and high in fiber and plant-based foods, may be beneficial in lowering cholesterol levels. The care team can provide personalized guidance based on Mr. Ahmad Rahman's overall health and medical history."
+    },
+    {
+      "id": "RSP-11",
+      "scenario": "Misspelt medicine label still explained",
+      "question": "what is this medicine for",
+      "passed": true,
+      "seconds": 2.1,
+      "answer": "This medicine contains glucosamine and curcumin, which are commonly used for joint pain and inflammation, particularly in conditions such as osteoarthritis."
+    },
+    {
+      "id": "RSP-13",
+      "scenario": "A labelled dose is reported to the nurse, not refused",
+      "question": "what is the usual starting dose of metformin",
+      "passed": true,
+      "seconds": 2.8,
+      "answer": "The usual starting dose of metformin is 500 mg orally twice a day or 850 mg once a day, given with meals."
+    },
+    {
+      "id": "RSP-12",
+      "scenario": "Summary covers every out-of-range result",
+      "question": "summarise this patient's report",
+      "passed": true,
+      "seconds": 5.7,
+      "answer": "This patient's report shows that their Total Bilirubin level is above the reference range, while their SGPT and Alkaline Phosphatase levels are also above the reference range. Their Albumin level is below the reference range. The other tests, including SGOT, Blood Urea Nitrogen, Serum Creatinine, and Platelet Count, are within the reference range."
+    }
+  ],
+  "run": "2026-10-16T14:20:34"
+}

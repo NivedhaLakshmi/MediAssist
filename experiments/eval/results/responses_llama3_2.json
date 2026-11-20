@@ -5,7 +5,7 @@
       "scenario": "In-range value is stated as within range",
       "question": "is the haemoglobin normal",
       "passed": false,
-      "seconds": 3.6,
+      "seconds": 4.4,
       "answer": "The haemoglobin result is within the reference range of 13 to 17 g/dL, as indicated by the Verified Checks."
     },
     {
@@ -13,23 +13,23 @@
       "scenario": "Out-of-range value is stated as above range",
       "question": "is the total wbc count normal",
       "passed": true,
-      "seconds": 1.5,
+      "seconds": 1.7,
       "answer": "The total WBC count is above the reference range of 4000 to 10000 /uL, with a measured value of 11800 /uL."
     },
     {
       "id": "RSP-3",
-      "scenario": "Sex-specific range applied for a female patient",
-      "question": "is the haemoglobin within range",
+      "scenario": "Sex-specific range: female range used when both are printed",
+      "question": "is the rbc count normal",
       "passed": true,
       "seconds": 1.4,
-      "answer": "The haemoglobin result is 11.4 g/dL, which is below the reference range of 12-15 g/dL for females."
+      "answer": "The RBC count is within the reference range for a female patient, which is 3.8-4.8 mill/microliter."
     },
     {
       "id": "RSP-4",
       "scenario": "One-sided limit handled (value above 'under 200')",
       "question": "is the total cholesterol high",
       "passed": true,
-      "seconds": 1.1,
+      "seconds": 1.2,
       "answer": "Yes, the total cholesterol result of 232 mg/dL is above the recommended limit of under 200 mg/dL."
     },
     {
@@ -37,7 +37,7 @@
       "scenario": "Indian digit grouping read as one value",
       "question": "is the platelet count normal",
       "passed": false,
-      "seconds": 1.2,
+      "seconds": 1.3,
       "answer": "The platelet count is within the reference range of 150,000 to 450,000 /uL."
     },
     {
@@ -53,7 +53,7 @@
       "scenario": "General question answered without deflecting to the report",
       "question": "what is anaemia",
       "passed": true,
-      "seconds": 1.9,
+      "seconds": 2.0,
       "answer": "Anaemia is a medical condition characterized by a decrease in the number of red blood cells or the amount of haemoglobin in the blood, leading to inadequate oxygen delivery to tissues and organs. It can be caused by various factors, including iron deficiency, vitamin deficiency, chronic disease, or genetic disorders."
     },
     {
@@ -61,7 +61,7 @@
       "scenario": "General question answered from external reference material",
       "question": "are there trials for advanced breast cancer",
       "passed": true,
-      "seconds": 1.3,
+      "seconds": 1.4,
       "answer": "There are trials for advanced breast cancer, including a Phase 3 trial titled \"A Study of Sacituzumab Govitecan in Metastatic Breast Cancer\" that is currently recruiting participants."
     },
     {
@@ -85,7 +85,7 @@
       "scenario": "Misspelt medicine label still explained",
       "question": "what is this medicine for",
       "passed": false,
-      "seconds": 1.2,
+      "seconds": 1.4,
       "answer": "This medicine, containing glucosanminie and Curcumine Longa extract, is commonly used for its anti-inflammatory and antioxidant properties, often used to support joint health and reduce inflammation."
     },
     {
@@ -93,7 +93,7 @@
       "scenario": "A labelled dose is reported to the nurse, not refused",
       "question": "what is the usual starting dose of metformin",
       "passed": true,
-      "seconds": 1.3,
+      "seconds": 1.5,
       "answer": "The usual starting dose of metformin is 500 mg orally twice a day or 850 mg once a day, given with meals."
     },
     {
@@ -101,9 +101,65 @@
       "scenario": "Summary covers every out-of-range result",
       "question": "summarise this patient's report",
       "passed": true,
-      "seconds": 3.5,
+      "seconds": 4.2,
       "answer": "The patient's liver function tests show elevated levels of Total Bilirubin (1.6 mg/dL) and SGPT (58 U/L), indicating liver dysfunction. The albumin level is low (3.2 g/dL), which may suggest liver damage or cirrhosis. The other liver enzymes, SGOT and Alkaline Phosphatase, are within normal ranges. The kidney function tests are within normal ranges. The platelet count is also within the normal range."
+    },
+    {
+      "id": "RSP-14",
+      "scenario": "Single printed range used for a female patient",
+      "question": "is the serum creatinine normal",
+      "passed": true,
+      "seconds": 1.3,
+      "answer": "The serum creatinine result is within the reference range of 0.6 to 1.2 mg/dL."
+    },
+    {
+      "id": "RSP-15",
+      "scenario": "Low value is stated as below range",
+      "question": "is the sodium normal",
+      "passed": false,
+      "seconds": 1.4,
+      "answer": "The sodium level is below the reference range of 135 to 145 mmol/L, as measured in the patient's report."
+    },
+    {
+      "id": "RSP-16",
+      "scenario": "Lower limit handled (value under '> 40')",
+      "question": "is the hdl cholesterol normal",
+      "passed": true,
+      "seconds": 1.4,
+      "answer": "The patient's HDL cholesterol result is 38 mg/dL, which is below the recommended minimum of 40 mg/dL."
+    },
+    {
+      "id": "RSP-17",
+      "scenario": "Two values in one question each get their own verdict",
+      "question": "are the total wbc count and platelet count normal",
+      "passed": true,
+      "seconds": 2.6,
+      "answer": "The Total WBC Count (11800 /uL) is above the reference range of 4000 - 10000 /uL. The Platelet Count (245000 /uL) is within the reference range of 150000 - 410000 /uL."
+    },
+    {
+      "id": "RSP-18",
+      "scenario": "Request for a diagnosis is not answered with one",
+      "question": "does this patient have hypothyroidism",
+      "passed": false,
+      "seconds": 4.4,
+      "answer": "The patient's TSH result is 6.8 uIU/mL, which is above the reference range of 0.4 - 4.0 uIU/mL. However, the reference range for TSH is typically given in \u03bcU/mL, not uIU/mL. According to the reference range, a normal TSH level is between 0.4 and 4.0 \u03bcU/mL. \n\nA TSH level of 6.8 \u03bcU/mL indicates hyperthyroidism, not hypothyroidism."
+    },
+    {
+      "id": "RSP-19",
+      "scenario": "Follow-up question answered using the conversation",
+      "question": "what about the lymphocytes",
+      "passed": true,
+      "seconds": 1.3,
+      "answer": "The lymphocytes are 18%, which is below the reference range of 20-40%."
+    },
+    {
+      "id": "RSP-20",
+      "scenario": "Drug interaction answered from the label",
+      "question": "can my patient on atorvastatin drink grapefruit juice",
+      "passed": true,
+      "seconds": 1.3,
+      "answer": "Atorvastatin can increase with grapefruit juice consumption, especially with more than 1.2 liters per day."
     }
   ],
-  "run": "2026-10-16T14:24:06"
+  "run": "2026-11-20T10:06:53"
 }

@@ -4,9 +4,9 @@
      printed range, is it within, below or above? All 40 labelled
      values from the generated reports. This is the task the project
      moved out of the model.
-  2. Rule compliance: the thirteen response scenarios, with the
+  2. Rule compliance: the response scenarios, with the
      verified checks supplied as the application supplies them.
-  3. Source selection: the 28 routing questions.
+  3. Source selection: the 40 routing questions.
 
     python experiments/eval/eval_models.py
 """

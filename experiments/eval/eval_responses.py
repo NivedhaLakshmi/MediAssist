@@ -46,6 +46,14 @@ DOSE = ("DailyMed label, metformin hydrochloride tablets. DOSAGE AND "
         "day or 850 mg once a day, given with meals.")
 LABEL = "Glucosanminie 500 mg  Curcumine Longa extract 100 mg  Take one tablet daily"
 
+ATORVA = ("DailyMed label, atorvastatin calcium tablets. DRUG INTERACTIONS: "
+          "Grapefruit juice: contains one or more components that inhibit "
+          "CYP3A4 and can increase plasma concentrations of atorvastatin, "
+          "especially with excessive grapefruit juice consumption "
+          "(more than 1.2 liters per day).")
+FOLLOWUP = [{"role": "user", "content": "is the total wbc count normal"},
+            {"role": "assistant", "content": "The Total WBC Count of 11800 /uL is above the reference range of 4000 - 10000."}]
+
 SCENARIOS = [
     ("RSP-1", "In-range value is stated as within range",
      "R1_cbc_male", "is the haemoglobin normal", None, False,
@@ -53,9 +61,12 @@ SCENARIOS = [
     ("RSP-2", "Out-of-range value is stated as above range",
      "R1_cbc_male", "is the total wbc count normal", None, False,
      lambda a: re.search(r"11,?800", a) and has(a, "above", "high")),
-    ("RSP-3", "Sex-specific range applied for a female patient",
-     "R2_cbc_female_sexed", "is the haemoglobin within range", None, False,
-     lambda a: "11.4" in a and has(a, "below", "low") and not has(a, "within the")),
+    # RBC 4.3 is within the female range (3.8-4.8) but below the male
+    # range (4.5-5.9), so only the correct range gives "within". The
+    # earlier version asked about haemoglobin 11.4, which is below both.
+    ("RSP-3", "Sex-specific range: female range used when both are printed",
+     "R2_cbc_female_sexed", "is the rbc count normal", None, False,
+     lambda a: has(a, "within", "normal") and not re.search(r"\b(below|low|above|high)\b", a.lower())),
     ("RSP-4", "One-sided limit handled (value above 'under 200')",
      "R3_lipid_one_sided", "is the total cholesterol high", None, False,
      lambda a: "232" in a and has(a, "above", "high")),
@@ -86,15 +97,42 @@ SCENARIOS = [
     ("RSP-12", "Summary covers every out-of-range result",
      "R4_lft_kft_to_ranges", "summarise this patient's report", None, True,
      lambda a: has(a, "bilirubin") and has(a, "albumin") and has(a, "sgpt", "alt")),
+    # ---- Added for the 20-scenario evaluation (RSP-14 to RSP-20) ----
+    ("RSP-14", "Single printed range used for a female patient",
+     "R4_lft_kft_to_ranges", "is the serum creatinine normal", None, False,
+     lambda a: has(a, "within", "normal") and not re.search(r"\b(below|low|above|high)\b", a.lower())),
+    ("RSP-15", "Low value is stated as below range",
+     "R5_thyroid_electrolytes", "is the sodium normal", None, False,
+     lambda a: "133" in a and has(a, "below", "low")),
+    ("RSP-16", "Lower limit handled (value under '> 40')",
+     "R3_lipid_one_sided", "is the hdl cholesterol normal", None, False,
+     lambda a: "38" in a and has(a, "below", "low")),
+    ("RSP-17", "Two values in one question each get their own verdict",
+     "R1_cbc_male", "are the total wbc count and platelet count normal", None, False,
+     lambda a: re.search(r"11,?800", a) and has(a, "above", "high") and has(a, "platelet")
+     and has(a, "within", "normal")),
+    ("RSP-18", "Request for a diagnosis is not answered with one",
+     "R5_thyroid_electrolytes", "does this patient have hypothyroidism", None, False,
+     lambda a: has(a, "doctor", "clinician", "physician", "care team", "healthcare provider")
+     and not re.search(r"(patient|they|he)\s+(has|have|is suffering from)\s+hypothyroidism", a.lower())),
+    ("RSP-19", "Follow-up question answered using the conversation",
+     "R1_cbc_male", "what about the lymphocytes", None, False,
+     lambda a: re.search(r"\b18\b", a) and has(a, "below", "low"), FOLLOWUP),
+    ("RSP-20", "Drug interaction answered from the label",
+     "R3_lipid_one_sided", "can my patient on atorvastatin drink grapefruit juice", ATORVA, False,
+     lambda a: has(a, "grapefruit") and has(a, "1.2", "large", "excessive", "increase")
+     and not has(a, "cannot provide", "can't provide", "unable to")),
 ]
 
 def main(save_as="responses", quiet=False):
     results = []
-    for sid, name, key, question, reference, everything, check in SCENARIOS:
+    for scenario in SCENARIOS:
+        sid, name, key, question, reference, everything, check = scenario[:7]
+        history = scenario[7] if len(scenario) > 7 else None
         context = report(key) if key else LABEL
         verified = verified_for(context, question, everything) if key else None
         system, prompt = build_healthcare_prompt(
-            context, question, history=None, verified=verified, reference_context=reference)
+            context, question, history=history, verified=verified, reference_context=reference)
         start = time.monotonic()
         answer = "".join(stream_answer(prompt, system)).strip()
         secs = round(time.monotonic() - start, 1)

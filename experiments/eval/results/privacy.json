@@ -16,7 +16,7 @@
       "id": "PRV-10",
       "scenario": "A photographed lab report adds no words to the outside search",
       "passed": true,
-      "detail": "3 reports (1 generated, 2 real) contributed 0 terms"
+      "detail": "2 reports (1 generated, 1 real) contributed 0 terms"
     },
     {
       "id": "PRV-11",
@@ -46,7 +46,7 @@
       "id": "PRV-6",
       "scenario": "A photo no conversation refers to is deleted from disk",
       "passed": true,
-      "detail": "stored as 4b13b227750e4a099d65534f7267435f.png, then pruned"
+      "detail": "stored as 3e366c61ee1743c7947176584c2542af.png, then pruned"
     },
     {
       "id": "PRV-7",
@@ -65,7 +65,61 @@
       "scenario": "Model runtime and source gateway are reached on this machine only",
       "passed": true,
       "detail": "gateway bound to 127.0.0.1:8000; model runtime at 127.0.0.1:11434"
+    },
+    {
+      "id": "PRV-12",
+      "scenario": "None of the 5 synthetic reports, photographed, adds words to outside searches",
+      "passed": true,
+      "detail": "5 reports contributed 0 terms"
+    },
+    {
+      "id": "PRV-13",
+      "scenario": "Across the 40 source questions, the full question is never sent outside",
+      "passed": true,
+      "detail": "40 questions searched; full question found in requests for 0"
+    },
+    {
+      "id": "PRV-14",
+      "scenario": "Outside requests go only to the four public medical sources",
+      "passed": true,
+      "detail": "90 requests to ['clinicaltrials.gov', 'dailymed.nlm.nih.gov', 'eutils.ncbi.nlm.nih.gov', 'wsearch.nlm.nih.gov']"
+    },
+    {
+      "id": "PRV-15",
+      "scenario": "The record tool asks Google Drive for read-only access",
+      "passed": true,
+      "detail": "scope https://www.googleapis.com/auth/drive.readonly"
+    },
+    {
+      "id": "PRV-16",
+      "scenario": "A profile's data export contains none of another profile's chats",
+      "passed": true,
+      "detail": "A's export has A's chat: True; has B's chat: False"
+    },
+    {
+      "id": "PRV-17",
+      "scenario": "Deleting a patient profile in the app leaves none of its chats or photos on disk",
+      "passed": true,
+      "detail": "files left after delete: none"
+    },
+    {
+      "id": "PRV-18",
+      "scenario": "Deleting a profile's photos removes every stored photo",
+      "passed": true,
+      "detail": "3 photos stored, then deleted"
+    },
+    {
+      "id": "PRV-19",
+      "scenario": "A stored photo does not keep its original file name",
+      "passed": true,
+      "detail": "saved 'daniel_tan_report.png' as 29400b61b12f4a4da8c5c830b35736bc.png"
+    },
+    {
+      "id": "PRV-20",
+      "scenario": "A patient's name typed into a question is not sent as a search keyword",
+      "passed": false,
+      "detail": "keywords 'tan wbc'"
     }
   ],
-  "run": "2026-10-15T13:32:29"
+  "run": "2026-11-20T07:21:43"
 }

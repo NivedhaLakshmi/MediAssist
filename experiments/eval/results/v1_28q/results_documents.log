@@ -1,0 +1,21 @@
+R1_cbc_male               digital PDF   pipeline 12/12 wrong 0 spurious 0   0.0s via text layer
+R1_cbc_male               scanned PDF   pipeline 11/12 wrong 0 spurious 0  20.5s via MedGemma | OCR only 12/12 wrong 0
+R1_cbc_male               clean image   pipeline 12/12 wrong 0 spurious 0  18.0s via MedGemma | OCR only 12/12 wrong 0
+R1_cbc_male               phone photo   pipeline  9/12 wrong 1 spurious 0  30.1s via OCR fallback | OCR only 9/12 wrong 1
+R2_cbc_female_sexed       digital PDF   pipeline  6/6 wrong 0 spurious 0   0.0s via text layer
+R2_cbc_female_sexed       scanned PDF   pipeline  5/6 wrong 0 spurious 0  14.6s via MedGemma | OCR only 6/6 wrong 0
+R2_cbc_female_sexed       clean image   pipeline  0/6 wrong 0 spurious 0  30.1s via OCR fallback | OCR only 0/6 wrong 0
+R2_cbc_female_sexed       phone photo   pipeline  6/6 wrong 0 spurious 0  14.0s via MedGemma | OCR only 2/6 wrong 0
+R3_lipid_one_sided        digital PDF   pipeline  6/6 wrong 0 spurious 0   0.0s via text layer
+R3_lipid_one_sided        scanned PDF   pipeline  5/6 wrong 0 spurious 0  11.1s via MedGemma | OCR only 5/6 wrong 0
+R3_lipid_one_sided        clean image   pipeline  5/6 wrong 0 spurious 0  11.0s via MedGemma | OCR only 0/6 wrong 0
+R3_lipid_one_sided        phone photo   pipeline  0/6 wrong 0 spurious 0  30.1s via OCR fallback | OCR only 0/6 wrong 0
+R4_lft_kft_to_ranges      digital PDF   pipeline  8/8 wrong 0 spurious 0   0.0s via text layer
+R4_lft_kft_to_ranges      scanned PDF   pipeline  7/8 wrong 0 spurious 0  13.4s via MedGemma | OCR only 8/8 wrong 0
+R4_lft_kft_to_ranges      clean image   pipeline  7/8 wrong 0 spurious 0  13.3s via MedGemma | OCR only 7/8 wrong 0
+R4_lft_kft_to_ranges      phone photo   pipeline  5/8 wrong 0 spurious 0  17.0s via MedGemma | OCR only 4/8 wrong 1
+R5_thyroid_electrolytes   digital PDF   pipeline  8/8 wrong 0 spurious 0   0.0s via text layer
+R5_thyroid_electrolytes   scanned PDF   pipeline  8/8 wrong 0 spurious 0  14.2s via MedGemma | OCR only 8/8 wrong 0
+R5_thyroid_electrolytes   clean image   pipeline  8/8 wrong 0 spurious 0  14.6s via MedGemma | OCR only 8/8 wrong 0
+R5_thyroid_electrolytes   phone photo   pipeline  2/8 wrong 0 spurious 0  30.1s via OCR fallback | OCR only 2/8 wrong 0
+chest X-ray (non-document): 0 findings produced, 30.2s
