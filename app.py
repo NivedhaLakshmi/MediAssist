@@ -983,6 +983,7 @@ with st.sidebar:
                     removed_chats = delete_all_conversations(
                         active_profile
                     )
+                    delete_all_attachments(active_profile)
 
                     credentials = get_google_drive_credentials()
 
